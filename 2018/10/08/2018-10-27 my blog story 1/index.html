@@ -18,7 +18,7 @@
 <meta property="og:image" content="http://yoursite.com/2018/10/08/2018-10-27%20my%20blog%20story%201/media/15193277632377/15368564935148.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/10/08/2018-10-27%20my%20blog%20story%201/media/15193277632377/15387582446597.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/10/08/2018-10-27%20my%20blog%20story%201/media/15193277632377/15387582721542.jpg">
-<meta property="og:updated_time" content="2018-11-16T09:59:55.410Z">
+<meta property="og:updated_time" content="2018-11-18T02:28:04.604Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="我的博客故事（上）">
 <meta name="twitter:description" content="简单教程基于GitHubpage，HEXO驱动的博客建立步骤简述：  注册GitHub账号，建立GitHubpage的仓库 安装HEXO的环境 安装HEXO HEXO和GitHub关联  我主要参考的是开智的教程极简四步走：快速搭建极客大牛都在用的独立博客教程体验很好，步骤少，心理负担小，不会觉得迷路。中间遇到问题，也能及时回到主线。不过在我这里，因为一个步骤没提，我卡住了一会，后来通过其他博客和">
@@ -270,10 +270,7 @@
 <p>第一个命令之前看到过，但是有反馈，我以为我有，就没有再去弄。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ eval &quot;$(ssh-agent -s)&quot;</span><br><span class="line">Agent pid 26950</span><br></pre></td></tr></table></figure>
 <p>但是看到下面这句话，试了一下确实没有。</p>
-<blockquote>
-<p>The ssh-add command should print out a long string of numbers and letters. </p>
-<p>If it does not print anything, you will need to generate a new SSH key and associate it with GitHub.</p>
-</blockquote>
+<p>The ssh-add command should print out a long string of numbers and letters.<br>If it does not print anything, you will need to generate a new SSH key and associate it with GitHub.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-add -l</span><br><span class="line">The agent has no identities.</span><br><span class="line">$ ssh-add</span><br></pre></td></tr></table></figure>
 <p>所以要<a href="https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" target="_blank" rel="noopener">新建KEY</a></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -b 4096 -C &quot;n****@gmail.com&quot;</span><br></pre></td></tr></table></figure>
@@ -300,7 +297,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/08/2018-10-27 my blog story 1/" data-id="cjojuw3ci0001gdt429ubufvf" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/10/08/2018-10-27 my blog story 1/" data-id="cjom9r3fb000167t4kb6oheqa" class="article-share-link">Share</a>
       
       
     </footer>
