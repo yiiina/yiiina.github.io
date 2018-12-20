@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="2017年2月到5月，我参加了开智学堂「编程思维 Python 基础班」三期课程的课程学习教程。教是更好的学，所以整理出这份教程。 我在这门课上有很多不顺利的地方，自认为自己写得比较好的地方是作为小白在思维上的入门。主干课程内容完成情况不是很好，之后也没有再去重修，所以教程可以说有很多漏洞，请多包容和指正。 2018-11-23  编程能力是一种解决问题的能力。如果问题没有很好地被解决，知道再多也">
+<meta property="og:type" content="article">
+<meta property="og:title" content="尝试用python解决问题">
+<meta property="og:url" content="http://yoursite.com/2018/11/21/2018-11-23 纯小白的Python教程 V4.0-7/index.html">
+<meta property="og:site_name" content="Yina：Life Renting">
+<meta property="og:description" content="2017年2月到5月，我参加了开智学堂「编程思维 Python 基础班」三期课程的课程学习教程。教是更好的学，所以整理出这份教程。 我在这门课上有很多不顺利的地方，自认为自己写得比较好的地方是作为小白在思维上的入门。主干课程内容完成情况不是很好，之后也没有再去重修，所以教程可以说有很多漏洞，请多包容和指正。 2018-11-23  编程能力是一种解决问题的能力。如果问题没有很好地被解决，知道再多也">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/2018/11/21/2018-11-23%20纯小白的Python教程%20V4.0-7/media/14865634767885/14877736096833.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/11/21/2018-11-23%20纯小白的Python教程%20V4.0-7/media/14885566591857/14886377111380.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/11/21/2018-11-23%20纯小白的Python教程%20V4.0-7/media/14885566591857/14886422175914.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/11/21/2018-11-23%20纯小白的Python教程%20V4.0-7/media/14892434101582/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-03-11%20%E4%B8%8B%E5%8D%8810.45.09.png">
+<meta property="og:updated_time" content="2018-12-20T18:52:04.568Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="尝试用python解决问题">
+<meta name="twitter:description" content="2017年2月到5月，我参加了开智学堂「编程思维 Python 基础班」三期课程的课程学习教程。教是更好的学，所以整理出这份教程。 我在这门课上有很多不顺利的地方，自认为自己写得比较好的地方是作为小白在思维上的入门。主干课程内容完成情况不是很好，之后也没有再去重修，所以教程可以说有很多漏洞，请多包容和指正。 2018-11-23  编程能力是一种解决问题的能力。如果问题没有很好地被解决，知道再多也">
+<meta name="twitter:image" content="http://yoursite.com/2018/11/21/2018-11-23%20纯小白的Python教程%20V4.0-7/media/14865634767885/14877736096833.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/11/21/2018-11-23 纯小白的Python教程 V4.0-7/"/>
+
+
+
+
+
+  <title>尝试用python解决问题 | Yina：Life Renting</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Yina：Life Renting</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/21/2018-11-23 纯小白的Python教程 V4.0-7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yina">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yina：Life Renting">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">尝试用python解决问题</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-21T18:55:45+08:00">
+                2018-11-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/纯小白的Python教程/" itemprop="url" rel="index">
+                    <span itemprop="name">纯小白的Python教程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>2017年2月到5月，我参加了开智学堂「编程思维 Python 基础班」三期课程的课程学习教程。教是更好的学，所以整理出这份教程。</p>
+<p>我在这门课上有很多不顺利的地方，自认为自己写得比较好的地方是作为小白在思维上的入门。主干课程内容完成情况不是很好，之后也没有再去重修，所以教程可以说有很多漏洞，请多包容和指正。</p>
+<p>2018-11-23 </p>
+<p>编程能力是一种解决问题的能力。如果问题没有很好地被解决，知道再多也没用。</p>
+<h1 id="天气查询工具"><a href="#天气查询工具" class="headerlink" title="天气查询工具"></a>天气查询工具</h1><p>###任务描述：公网可查的天气查询程序<br>功能：完成一个最简天气查询程序，运行在命令行界面，实现以下功能：</p>
+<ul>
+<li>输入城市名，获取该城市的天气情况；</li>
+<li>输入指令，获取帮助信息（一般使用 h 或 help）；</li>
+<li>输入指令，获取历史查询信息（一般使用 history）；</li>
+<li>输入指令，退出程序（一般使用 quit 或 exit）。</li>
+</ul>
+<h3 id="任务拆解：解决问题的思路"><a href="#任务拆解：解决问题的思路" class="headerlink" title="任务拆解：解决问题的思路"></a>任务拆解：解决问题的思路</h3><p>####有交互，需要用户输入信息<br>python2和python3中有一个区别：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># python2：raw_input</span><br><span class="line">userinput= raw_input(&quot;查询天气请输出城市名&quot; )</span><br><span class="line"></span><br><span class="line"># python3: input</span><br><span class="line">userinput= input(&quot;查询天气请输出城市名&quot; )</span><br></pre></td></tr></table></figure>
+<h4 id="流程控制程序"><a href="#流程控制程序" class="headerlink" title="流程控制程序"></a>流程控制程序</h4><p>4种不同条件下的结果：使用条件判断语句：if…elif…else</p>
+<ul>
+<li>“if”“elif” 条件判断语句，如相应的判断条件成立时，执行后面的语句</li>
+<li>“else” 条件判断语句，如任何判断条件都不成立时，则执行后面的语句</li>
+</ul>
+<p>解决只能输入一次的问题，while可以实现无限循环<br>“while true” 条件判断语句，如果判断条件永远为true，程序将会无限循环执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">while True:    </span><br><span class="line">   if :    </span><br><span class="line">   elif：   </span><br><span class="line">   elif：</span><br><span class="line">   elif：      </span><br><span class="line">   else：</span><br></pre></td></tr></table></figure>
+<h4 id="quit-简单"><a href="#quit-简单" class="headerlink" title="quit #简单"></a>quit #简单</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">if userinput=&quot;quit&quot;</span><br><span class="line">  quit()</span><br></pre></td></tr></table></figure>
+<h4 id="help-简单"><a href="#help-简单" class="headerlink" title="help #简单"></a>help #简单</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">  #实现方法1 直接print 帮助信息</span><br><span class="line">if userinput=&quot;help&quot;</span><br><span class="line">print &quot;&quot;&quot; </span><br><span class="line">  输入城市名，可获取该城市的天气情况；</span><br><span class="line">  输入help，获取帮助信息；</span><br><span class="line">  输入history，获取历史查询信息；</span><br><span class="line">  输入quit，退出程序</span><br><span class="line">&quot;&quot;&quot; </span><br><span class="line">  #实现方法2 调用help文档</span><br></pre></td></tr></table></figure>
+<h4 id="输入城市名，获取该城市的天气情况-困难"><a href="#输入城市名，获取该城市的天气情况-困难" class="headerlink" title="输入城市名，获取该城市的天气情况 # 困难"></a>输入城市名，获取该城市的天气情况 # 困难</h4><p>难点：如何应用天气数据</p>
+<p>####历史查询 # 困难</p>
+<h3 id="难点击破"><a href="#难点击破" class="headerlink" title="难点击破"></a>难点击破</h3><p>####如何应用天气：打开文档，读取文档内容，内容赋值到变量，关闭文档<br>打开文档</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">f=open(&quot;weather_info.txt&quot;,&quot;r&quot;)</span><br><span class="line">with open(&apos;&apos;weather_info.txt&quot;,&quot;r&quot;) as f:</span><br></pre></td></tr></table></figure>
+<p>读取文档内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">f.read()</span><br><span class="line">f.readlines() #读取了整个文件，读取速度会很慢</span><br></pre></td></tr></table></figure>
+<p>关闭文档</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">f.close()</span><br></pre></td></tr></table></figure>
+<p>用一个变量接受内容,内容赋值到该变量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">weather=f.read()</span><br><span class="line">weather=f.readlines()</span><br></pre></td></tr></table></figure>
+<p>###如何把文档中的数据转化成dict呢<br>建立字典数据<br><code>dict={}</code></p>
+<p>城市和天气分开，并形成key和value的一一对应<br><code>Python split()</code>通过指定分隔符对字符串进行切片，拆成了一个数组，一个list给key，一个list给value<br>几种不同形式的参考：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">for line in f：</span><br><span class="line">key,value=line.strip().split(&apos;,&apos;)</span><br><span class="line">dict[key]=(value)</span><br><span class="line"></span><br><span class="line">for items in weather:</span><br><span class="line">item = item.split(&quot;,&quot;)</span><br><span class="line">city_dict[[item[0]]=item[1]</span><br><span class="line"></span><br><span class="line">city_dict = dict(item.split(&quot;,&quot;) fot item in weather)</span><br><span class="line"></span><br><span class="line">for line in f.readlines():</span><br><span class="line">line = line.strip(&apos;\n)</span><br><span class="line">line = line.split(&apos;,&apos;)</span><br><span class="line">key= line.pop(0)</span><br><span class="line">value=line.pop(-1)</span><br><span class="line">dict[key]=value</span><br></pre></td></tr></table></figure>
+<h4 id="查询天气"><a href="#查询天气" class="headerlink" title="查询天气"></a>查询天气</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">elif userinput in dict:    </span><br><span class="line"> print(&quot;%s城市的天气为%s&quot;%(userinput,dict[userinput]))</span><br></pre></td></tr></table></figure>
+<p>如何查询历史呢？<br>历史是什么类型的数据？——有序、“键”<br>历史是一个list<br>历史有顺序，有列表的痕迹，可用一个二元元祖数据表示<br>history的是想到append()到一个数组里，调用起来会方便一点</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">history = []</span><br><span class="line"></span><br><span class="line">  elif userinput in dict:</span><br><span class="line">       print (&quot;%s城市的天气为%s&quot;%(userinput,dict[userinput]))</span><br><span class="line">       history.append(userinput)</span><br><span class="line">                </span><br><span class="line">  elif userinput == &quot;history&quot;:</span><br><span class="line">       for i in history:</span><br><span class="line">       print (&quot;i&quot;)</span><br></pre></td></tr></table></figure>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><p>写代码中遇到很多错误反馈。一次次调整，也是一次次学习～<br>作为小白，犯了很多初级错误，但是反复修改，感觉对语法规范掌握更好一些了。<br>比如：<br>错误：quit<br>正确：quit（）</p>
+<p>错误：elif:userinput == “help”:<br>正确：elif userinput == “help”:</p>
+<p>错误：f=open(“weather_info”)<br>正确：f=open(“weather_info.txt”)</p>
+<p>附上代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"> #coding:utf-8” </span><br><span class="line"></span><br><span class="line">f=open(&quot;weather_info.txt&quot;)</span><br><span class="line"></span><br><span class="line">dict = &#123;&#125;</span><br><span class="line"></span><br><span class="line">for line in f:</span><br><span class="line">        key,value=line.strip().split(&apos;,&apos;)</span><br><span class="line">        dict[key]=value</span><br><span class="line"></span><br><span class="line">history = []</span><br><span class="line"></span><br><span class="line">while True:</span><br><span class="line">        userinput=input(&quot;请输入要查询天气的城市名：&quot;)</span><br><span class="line"></span><br><span class="line">        if userinput == &quot;quit&quot;:</span><br><span class="line">                  quit()        </span><br><span class="line">        </span><br><span class="line">        elif userinput == &quot;help&quot;: </span><br><span class="line">                print (&quot;&quot;&quot; </span><br><span class="line">                输入城市名，可获取该城市的天气情况；</span><br><span class="line">                  输入help，获取帮助信息；</span><br><span class="line">                  输入history，获取历史查询信息；</span><br><span class="line">                  输入quit，退出程序</span><br><span class="line">                &quot;&quot;&quot; )        </span><br><span class="line">         </span><br><span class="line">        elif userinput in dict:</span><br><span class="line">                 print (&quot;%s城市的天气为%s&quot;%(userinput,dict[userinput]))</span><br><span class="line">                 history.append(userinput)</span><br><span class="line">                </span><br><span class="line">        elif userinput == &quot;history&quot;:</span><br><span class="line">                for i in history:</span><br><span class="line">                        print (&quot;i&quot;)</span><br><span class="line">         </span><br><span class="line">        else:</span><br><span class="line">                 print (&quot;&quot;&quot; </span><br><span class="line">                输入城市名，可获取该城市的天气情况；</span><br><span class="line">                  输入help，获取帮助信息；</span><br><span class="line">                  输入history，获取历史查询信息；</span><br><span class="line">                  输入quit，退出程序</span><br><span class="line">                &quot;&quot;&quot; )</span><br></pre></td></tr></table></figure>
+<h1 id="可查即时数据的天气查询工具"><a href="#可查即时数据的天气查询工具" class="headerlink" title="可查即时数据的天气查询工具"></a>可查即时数据的天气查询工具</h1><p>###任务描述：公网可查的天气查询程序<br>基本功能同任务1：完成一个天气查询程序，运行在命令行界面，实现以下功能：</p>
+<ul>
+<li>输入城市名，获取该城市的天气情况；</li>
+<li>输入指令，获取帮助信息（一般使用 h 或 help）；</li>
+<li>输入指令，获取历史查询信息（一般使用 history）；</li>
+<li>输入指令，退出程序（一般使用 quit 或 exit）。</li>
+</ul>
+<p>新增功能：查询时获取的是最新的天气情况，且包含更多维的天气数据</p>
+<h3 id="任务拆解：解决问题的思路-1"><a href="#任务拆解：解决问题的思路-1" class="headerlink" title="任务拆解：解决问题的思路"></a>任务拆解：解决问题的思路</h3><h4 id="任务1代码分析"><a href="#任务1代码分析" class="headerlink" title="任务1代码分析"></a>任务1代码分析</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">coding:utf-8” #中文字符编码</span><br><span class="line">变化1:任务1中，是打开本地天气数据文本，任务3，要调用实时数据，要调用API</span><br><span class="line">f=open(&quot;weather_info.txt&quot;) </span><br><span class="line">任务1 实现城市名称和天气之间的一一对应，建立一个字典数据</span><br><span class="line">任务3 搜索结果是多维的，字典里面，会嵌套列表数据，这一步暂时不确定要不要改动</span><br><span class="line">dict = &#123;&#125; </span><br><span class="line"></span><br><span class="line">因为数据源的变化，所以这部分都要改掉</span><br><span class="line">for line in f:</span><br><span class="line">	key,value=line.strip().split(&apos;,&apos;) #为key和value赋值</span><br><span class="line">	dict[key]=value #key和value之间建立对应关系</span><br><span class="line"></span><br><span class="line">任务1中历史是一个列表数据</span><br><span class="line">任务3中，历史是一个列表嵌套数据了</span><br><span class="line">history = [] </span><br><span class="line"></span><br><span class="line">以下代码执行阶段，只要变量名称设定不变，那么也就不会变，可以复用</span><br><span class="line">while True: </span><br><span class="line">	userinput=input(&quot;请输入要查询天气的城市名：&quot;)</span><br><span class="line"></span><br><span class="line">	if userinput == &quot;quit&quot;:</span><br><span class="line">  		quit()	</span><br><span class="line">	</span><br><span class="line">	elif userinput == &quot;help&quot;: </span><br><span class="line">		print (&quot;&quot;&quot; </span><br><span class="line">		输入城市名，可获取该城市的天气情况；</span><br><span class="line">  		输入help，获取帮助信息；</span><br><span class="line">  		输入history，获取历史查询信息；</span><br><span class="line">  		输入quit，退出程序</span><br><span class="line">		&quot;&quot;&quot; )	</span><br><span class="line"> 	</span><br><span class="line">	elif userinput in dict:</span><br><span class="line"> 		print (&quot;%s城市的天气为%s&quot;%(userinput,dict[userinput]))</span><br><span class="line"> 		history.append(userinput)</span><br><span class="line">		</span><br><span class="line">	elif userinput == &quot;history&quot;:</span><br><span class="line">		for i in history:</span><br><span class="line">			print (&quot;i&quot;)</span><br><span class="line"> 	</span><br><span class="line">	else:</span><br><span class="line"> 		print (&quot;&quot;&quot; </span><br><span class="line">		输入城市名，可获取该城市的天气情况；</span><br><span class="line">  		输入help，获取帮助信息；</span><br><span class="line">  		输入history，获取历史查询信息；</span><br><span class="line">  		输入quit，退出程序</span><br><span class="line">		&quot;&quot;&quot; )</span><br></pre></td></tr></table></figure>
+<h4 id="新任务拆解"><a href="#新任务拆解" class="headerlink" title="新任务拆解"></a>新任务拆解</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">coding:utf-8” </span><br><span class="line"></span><br><span class="line">调用API的实时数据</span><br><span class="line">显示多维的数据，字典数据的一个key，对应一个列表数据，这一步暂时不确定要不要改动</span><br><span class="line"></span><br><span class="line">dict = &#123;&#125; </span><br><span class="line"></span><br><span class="line">处理调用过来的数据，定义key和value的对应，其中value是列表数据</span><br><span class="line"></span><br><span class="line">任务3中，历史是一个列表嵌套数据了</span><br><span class="line">history = [] </span><br><span class="line"> 	</span><br><span class="line">	elif userinput in dict:</span><br><span class="line"> 		print (&quot;%s城市的天气为%s&quot;%(userinput,dict[userinput]))</span><br><span class="line"> 		history.append(userinput)</span><br><span class="line">		</span><br><span class="line">	elif userinput == &quot;history&quot;:</span><br><span class="line">		for i in history:</span><br><span class="line">			print (&quot;i&quot;)</span><br></pre></td></tr></table></figure>
+<h4 id="如何实现实时数据查询：API调用"><a href="#如何实现实时数据查询：API调用" class="headerlink" title="如何实现实时数据查询：API调用"></a>如何实现实时数据查询：API调用</h4><p>通过API调用在线数据，实现数据实时查询</p>
+<h4 id="安装requests模块，通过request模块和API交互-发送请求"><a href="#安装requests模块，通过request模块和API交互-发送请求" class="headerlink" title="安装requests模块，通过request模块和API交互,发送请求"></a>安装requests模块，通过request模块和API交互,发送请求</h4><p>通过pip安装request</p>
+<p>python3.6自带pip，但是要更新一下<code>install -U pip</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">install -U pip</span><br><span class="line">jiangyinadeMacBook-Pro:desktop Yina$ pip install -U pip</span><br><span class="line">Requirement already up-to-date: pip in /Library/Frameworks/Python.framework/Versios/2.7/lib/python2.7/site-packages</span><br></pre></td></tr></table></figure>
+<p>问题：默认文件都是python2.7,更新的也是python2.7的pip</p>
+<p>如果安装requests默认两个版本都可以用，就没有问题了。</p>
+<p>安装requests <code>pip install requests</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">jiangyinadeMacBook-Pro:desktop Yina$ pip install requests</span><br><span class="line">Collecting requests</span><br><span class="line">  Retrying (Retry(total=4, connect=None, read=None, redirect=None)) after connection broken by &apos;NewConnectionError(&apos;&lt;pip._vendor.requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x103146e90&gt;: Failed to establish a new connection: [Errno 65] No route to host&apos;,)&apos;: /simple/requests/</span><br><span class="line">  Downloading requests-2.13.0-py2.py3-none-any.whl (584kB)</span><br><span class="line">    100% |████████████████████████████████| 593kB 1.4MB/s </span><br><span class="line">Installing collected packages: requests</span><br><span class="line">Successfully installed requests-2.13.0</span><br></pre></td></tr></table></figure>
+<p>测试renquests是否安装成功：<br>python2是安装成功的，但是python3下没有</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">jiangyinadeMacBook-Pro:desktop Yina$ python</span><br><span class="line">Python 2.7.13 (v2.7.13:a06454b1afa1, Dec 17 2016, 12:39:47) </span><br><span class="line">[GCC 4.2.1 (Apple Inc. build 5666) (dot 3)] on darwin</span><br><span class="line">Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.</span><br><span class="line">&gt;&gt;&gt; import requests</span><br><span class="line"></span><br><span class="line">jiangyinadeMacBook-Pro:desktop Yina$ python3</span><br><span class="line">Python 3.6.0 (v3.6.0:41df79263a11, Dec 22 2016, 17:23:13) </span><br><span class="line">[GCC 4.2.1 (Apple Inc. build 5666) (dot 3)] on darwin</span><br><span class="line">Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.</span><br><span class="line">&gt;&gt;&gt; import requests</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;</span><br><span class="line">ModuleNotFoundError: No module named &apos;requests&apos;</span><br></pre></td></tr></table></figure>
+<p>现在只有python2版本下成功安装好requests，2种解决方案：</p>
+<ol>
+<li>配置可以切换python2和python3的yyuu/pyenv，切换到python3，然后再重新安装requests</li>
+<li>用python2做这次任务</li>
+</ol>
+<p>在 @leilayanhui教程中发现可疑通过pip3 install requests安装到python3版本，试了一下,成功了</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">jiangyinadeMacBook-Pro:desktop Yina$ pip3 install requests</span><br><span class="line">Collecting requests</span><br><span class="line">  Using cached requests-2.13.0-py2.py3-none-any.whl</span><br><span class="line">Installing collected packages: requests</span><br><span class="line">Successfully installed requests-2.13.0</span><br><span class="line">jiangyinadeMacBook-Pro:desktop Yina$ python3</span><br><span class="line">Python 3.6.0 (v3.6.0:41df79263a11, Dec 22 2016, 17:23:13) </span><br><span class="line">[GCC 4.2.1 (Apple Inc. build 5666) (dot 3)] on darwin</span><br><span class="line">Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.</span><br><span class="line">&gt;&gt;&gt; import requests</span><br><span class="line">&gt;&gt;&gt; </span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="选择心知天气的-API"><a href="#选择心知天气的-API" class="headerlink" title="选择心知天气的 API"></a>选择心知天气的 API</h4><p>卡包中提供了几种，心知，彩云，还有一个是国外的<br>先选择国内的数据<br>试用了一下彩云，发现它需要审核之后才能用。免费的使用有问题，返回的json数据表示配额已用完</p>
+<p>弃</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; import requests</span><br><span class="line">&gt;&gt;&gt; r=requests.get(&apos;https://api.caiyunapp.com/v2/TAkhjf8d1nlSlspN/121.6544,25.1552/realtime.json&apos;)</span><br><span class="line">&gt;&gt;&gt; r.json()</span><br><span class="line">&#123;u&apos;status&apos;: u&apos;failed&apos;, u&apos;error&apos;: u&apos;API quota is exhausted&apos;&#125;</span><br></pre></td></tr></table></figure>
+<p>换成心知的，返回的数据是这样的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br><span class="line">&gt;&gt;&gt; url=&apos;https://api.thinkpage.cn/v3/weather/now.json?key=wzgjycshjgiuisxr&amp;location=beijing&amp;language=zh-Hans&amp;unit=c&apos;</span><br><span class="line">&gt;&gt;&gt; r=requests.get(url)</span><br><span class="line">&gt;&gt;&gt; r.json()</span><br><span class="line">&#123;u&apos;results&apos;: [&#123;u&apos;now&apos;: &#123;u&apos;text&apos;: u&apos;\u6674&apos;, u&apos;code&apos;: u&apos;0&apos;, u&apos;temperature&apos;: u&apos;3&apos;&#125;, u&apos;location&apos;: &#123;u&apos;name&apos;: u&apos;\u5317\u4eac&apos;, u&apos;country&apos;: u&apos;CN&apos;, u&apos;timezone_offset&apos;: u&apos;+08:00&apos;, u&apos;path&apos;: u&apos;\u5317\u4eac,\u5317\u4eac,\u4e2d\u56fd&apos;, u&apos;timezone&apos;: u&apos;Asia/Shanghai&apos;, u&apos;id&apos;: u&apos;WX4FBXXFKE4F&apos;&#125;, u&apos;last_update&apos;: u&apos;2017-02-02T17:50:00+08:00&apos;&#125;]&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="什么是JSON，JSON的数据结构，JSON的数据和python数据的转化"><a href="#什么是JSON，JSON的数据结构，JSON的数据和python数据的转化" class="headerlink" title="什么是JSON，JSON的数据结构，JSON的数据和python数据的转化"></a>什么是JSON，JSON的数据结构，JSON的数据和python数据的转化</h4><ul>
+<li>JSON(JavaScript Object Notation)，<strong>javascript对象表示法</strong><ul>
+<li>javascript世界上最流行的脚本语言，属于web语言，被设计向html页面增加交互性</li>
+</ul>
+</li>
+<li>一种轻量级的<strong>文本数据交换格式。</strong></li>
+<li>理想的<strong>数据交换语言</strong><ul>
+<li>易于人阅读和编写，易于机器解析和生成</li>
+<li>独立于语言和平台，JSON解析器和JSON库支持许多不同的编程语言</li>
+</ul>
+</li>
+</ul>
+<p><strong>JSON建构于两种结构：</strong></p>
+<ol>
+<li>“名称/值”对的集合（A collection of name/value pairs）</li>
+<li>值的有序列表（An ordered list of values）</li>
+</ol>
+<p>因为大部分计算机语言是以各自形式支持这种数据结构的，所以它可以在这些语言之间进行交换。</p>
+<p><strong>JSON具有以下这些形式：</strong></p>
+<p>对象 object：{}<br>一个无序的“‘名称/值’对”集合。string:value<br>{string1:value1, string2,value ……stringn:valuen}</p>
+<p>数组 array :[]<br>值（value）的有序集合。<br>[value1,value2,…valuen]</p>
+<p>值 value<br>字符串（string）、数值(number)、true、false、 null、对象（object）或者数组（array）<br>这些结构可以<strong>嵌套</strong></p>
+<p><strong>JSON的数据类型和python数据类型的转化</strong><br>JSON            Python<br>object         dict<br>array            list<br>string         str<br>number(int)      int<br>number(real) float<br>true            True<br>false            False<br>null            None</p>
+<h4 id="返回的数据结构分析"><a href="#返回的数据结构分析" class="headerlink" title="返回的数据结构分析"></a>返回的数据结构分析</h4><p>心知天气提供了一个返回结果示例。和代码里r.json()返回的数据结构是一样的。分析这个JSON数据结构，如果它转化为python数据，会是什么样的？</p>
+<p>先简化这个数据结构：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;results&quot;: [&#123;</span><br><span class="line">  &quot;location&quot;: &#123;</span><br><span class="line">      &quot;name&quot;: &quot;西雅图&quot;,</span><br><span class="line">      &quot;country&quot;: &quot;US&quot;,</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;now&quot;: &#123;</span><br><span class="line">      &quot;text&quot;: &quot;多云&quot;, </span><br><span class="line">      &quot;temperature&quot;: &quot;14&quot;, </span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;last_update&quot;: &quot;2015-09-25T22:45:00-07:00&quot; </span><br><span class="line">  &#125;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;results&quot;: [  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>从里往外看，最里面一层 {},有名称-值的对的集合，所以是json中的<br>对象,转化成python是dict</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;&quot;name&quot;:&quot;西雅图&quot;,&quot;country&quot;:&quot;US&quot;&#125;</span><br><span class="line">&#123;&quot;text&quot;:&quot;多云&quot;,&quot;temperature&quot;:&quot;14&quot;&#125;</span><br></pre></td></tr></table></figure>
+<p>第二层也是json对象,内部有3个名称,“location”,“now”和“last_updata”。<br>其中”location”和”now”的value都是一个dict</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&quot;location&quot;：&#123;&#125;,&quot;now&quot;:&#123;&#125;,&quot;last_update&quot;:2015-09-25T 22:45:00-07:00&#125;</span><br></pre></td></tr></table></figure>
+<p>第二层的对象，再套入一个数组[]，数组中只有1个value,就是这个对象。对应到python,它是一个列表</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[&#123;  &quot;location&quot;: &#123;&#125;,&quot;now&quot;: &#123;&#125;, &quot;last_update&quot;: &quot;2015-09-25T22:45:00-07:00&quot; &#125;]</span><br></pre></td></tr></table></figure>
+<p>再外面一层：这个列表作为 value，和名称为result配对。建立最外层的对象,这个对象中，只有一个名称-值的对</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123; &quot;results&quot;: []&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="load-把JSON的数据，转成python的数据"><a href="#load-把JSON的数据，转成python的数据" class="headerlink" title="load()把JSON的数据，转成python的数据"></a><code>load()</code>把JSON的数据，转成python的数据</h4><p>从api获取数据之后，需要把JSON的专成python结构的<br><a href="http://python3-cookbook.readthedocs.io/zh_CN/latest/c06/p02_read-write_json_data.html" target="_blank" rel="noopener">读写JSON数据</a></p>
+<p>这篇文章里，发现可以通过<code>json.dump()</code>和<code>json.loads()</code>实现互相转化。这里我要用到的就是<code>json.loads()</code><br>一开始并不成功,报错信息是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; data=json.loads(r)</span><br><span class="line">TypeError: expected string or buffer</span><br></pre></td></tr></table></figure>
+<p>后来把参数改成r.txt就成功了</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> r=requests.get(url)</span><br><span class="line">&gt;&gt;&gt; data = json.loads(r.text)</span><br><span class="line">&gt;&gt;&gt; data</span><br><span class="line">&#123;&apos;results&apos;: [&#123;&apos;location&apos;: &#123;&apos;id&apos;: &apos;WX4FBXXFKE4F&apos;, &apos;name&apos;: &apos;北京&apos;, &apos;country&apos;: &apos;CN&apos;, &apos;path&apos;: &apos;北京,北京,中国&apos;, &apos;timezone&apos;: &apos;Asia/Shanghai&apos;, &apos;timezone_offset&apos;: &apos;+08:00&apos;&#125;, &apos;now&apos;: &#123;&apos;text&apos;: &apos;多云&apos;, &apos;code&apos;: &apos;4&apos;, &apos;temperature&apos;: &apos;3&apos;&#125;, &apos;last_update&apos;: &apos;2017-02-05T22:45:00+08:00&apos;&#125;]&#125;</span><br></pre></td></tr></table></figure>
+<p>一个猜测：json是文本数据</p>
+<h4 id="使用request发送请求：post-or-get"><a href="#使用request发送请求：post-or-get" class="headerlink" title="使用request发送请求：post or get?"></a>使用request发送请求：post or get?</h4><p>先看看get和post分别会返回什么东西呢</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; import requests</span><br><span class="line">&gt;&gt;&gt; url=&apos;https://api.thinkpage.cn/v3/weather/now.json?key=wzgjycshjgiuisxr&amp;location=beijing&amp;language=zh-Hans&amp;unit=c&apos;</span><br><span class="line">&gt;&gt;&gt; r=requests.get(url)</span><br><span class="line">&gt;&gt;&gt; r</span><br><span class="line">&lt;Response [200]&gt;</span><br><span class="line">&gt;&gt;&gt; r=requests.post(url)</span><br><span class="line">&gt;&gt;&gt; r</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+<p>心知天气上，给到的返回结果是200<br>404在这里不知道是什么意思，但是常识，好像是找不到页面的意思～</p>
+<p>看到一篇关于<a href="http://mp.weixin.qq.com/s?__biz=MzI3NzIzMzg3Mw==&amp;mid=100000054&amp;idx=1&amp;sn=71f6c214f3833d9ca20b9f7dcd9d33e4#rd" target="_blank" rel="noopener">post和get的文章</a>写得挺有意思：</p>
+<h4 id="需要输出的是什么类型的数据"><a href="#需要输出的是什么类型的数据" class="headerlink" title="需要输出的是什么类型的数据"></a>需要输出的是什么类型的数据</h4><p>{‘results’: [{‘location’: {‘id’: ‘WX4FBXXFKE4F’, ‘name’: ‘北京’, ‘country’: ‘CN’, ‘path’: ‘北京,北京,中国’, ‘timezone’: ‘Asia/Shanghai’, ‘timezone_offset’: ‘+08:00’}, ‘now’: {‘text’: ‘多云’, ‘code’: ‘4’, ‘temperature’: ‘3’}, ‘last_update’: ‘2017-02-05T22:45:00+08:00’}]}</p>
+<p>输入：name:北京</p>
+<p>输出：”北京当前的天气是%s,温度是%s”%(‘text’，’code’)</p>
+<p>3个key-value：”name”:”北京”,”text”:”多云”,”temperature”:”14”</p>
+<p>第一个key-value,和后面两个key-value,构成一个key-value</p>
+<p>{北京：{“text”:”多云”,”temperature”:”14”}}</p>
+<h4 id="如何获取数据呢-——-通过函数，返回需要的数据"><a href="#如何获取数据呢-——-通过函数，返回需要的数据" class="headerlink" title="如何获取数据呢? —— 通过函数，返回需要的数据"></a>如何获取数据呢? —— 通过函数，返回需要的数据</h4><p>通过requests.get, 返回了一个数据结构。但是因为没有具体的数值。这时候要向API传递参数，然后返回值。</p>
+<p>复习函数<br>函数包括：函数名称，函数体，参数，返回值</p>
+<p>通过def语句自定义函数，<br>def 函数名称(参数)：<br>    函数体<br>    return 返回值</p>
+<p>函数的参数：必选参数，默认参数，可变参数，关键字参数</p>
+<p>数据</p>
+<p>####心知天气 API 调用示例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">import json</span><br><span class="line">import sys</span><br><span class="line">import requests</span><br><span class="line">from utils.const_value import API, KEY, UNIT, LANGUAGE</span><br><span class="line">from utils.helper import getLocation</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def fetchWeather(location):</span><br><span class="line">    result = requests.get(API, params=&#123;</span><br><span class="line">        &apos;key&apos;: KEY,</span><br><span class="line">        &apos;location&apos;: location,</span><br><span class="line">        &apos;language&apos;: LANGUAGE,</span><br><span class="line">        &apos;unit&apos;: UNIT</span><br><span class="line">    &#125;, timeout=1)</span><br><span class="line">    return result.text</span><br><span class="line"></span><br><span class="line">if __name__ == &apos;__main__&apos;:</span><br><span class="line">    location = getLocation()</span><br><span class="line">    result = fetchWeather(location)</span><br><span class="line">    print(result)</span><br></pre></td></tr></table></figure>
+<p>调整</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">import json</span><br><span class="line">import sys</span><br><span class="line">import requests</span><br><span class="line">utils=&apos;https://api.thinkpage.cn/v3/weather/now.json?key=wzgjycshjgiuisxr&amp;location=beijing&amp;language=zh-Hans&amp;unit=c&apos;</span><br><span class="line">from utils.const_value import API, KEY, UNIT, LANGUAGE</span><br><span class="line">from utils.helper import getLocation</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def fetchWeather(location):</span><br><span class="line">    result = requests.get(API, params=&#123;</span><br><span class="line">        &apos;key&apos;: KEY,</span><br><span class="line">        &apos;location&apos;: location,</span><br><span class="line">        &apos;language&apos;: LANGUAGE,</span><br><span class="line">        &apos;unit&apos;: UNIT</span><br><span class="line">    &#125;, timeout=1)</span><br><span class="line">    return result.text</span><br><span class="line"></span><br><span class="line">if __name__ == &apos;__main__&apos;:</span><br><span class="line">    location = getLocation()</span><br><span class="line">    result = fetchWeather(location)</span><br><span class="line">    print(result)</span><br></pre></td></tr></table></figure>
+<h1 id="内网版天气查询系统"><a href="#内网版天气查询系统" class="headerlink" title="内网版天气查询系统"></a>内网版天气查询系统</h1><p>任务：完成一个网页版天气查询程序，实现以下功能：<br>基本功能</p>
+<ul>
+<li>输入城市名，获取该城市最新天气情况</li>
+<li>点击「帮助」，获取帮助信息</li>
+<li>点击「历史」，获取历史查询信息<br>部署在命令行界面</li>
+</ul>
+<h2 id="任务分析（更新）"><a href="#任务分析（更新）" class="headerlink" title="任务分析（更新）"></a>任务分析（更新）</h2><p>WSGI 接口函数<br>请求<br>响应<br>首页格式<br>submit 表单输入<br>天气应用程序(可复用)<br>HTML网页文本</p>
+<h2 id="web建站基础知识"><a href="#web建站基础知识" class="headerlink" title="web建站基础知识"></a>web建站基础知识</h2><h3 id="CS-amp-BS"><a href="#CS-amp-BS" class="headerlink" title="CS &amp; BS"></a>CS &amp; BS</h3><table>
+<thead>
+<tr>
+<th>CS client and server</th>
+<th>BS browser server</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>软件在桌面端，数据库在服务器</td>
+<td>浏览器发起需求，数据库在服务端</td>
+</tr>
+<tr>
+<td>升级时候需要客户端一一升级</td>
+<td>更加灵活</td>
+</tr>
+</tbody>
+</table>
+<h3 id="BS关键词"><a href="#BS关键词" class="headerlink" title="BS关键词"></a>BS关键词</h3><p>浏览器 服务器 HTTP HTML  REQUEST  RESPONCE </p>
+<p>附：关于建站技术，知乎上这个<a href="https://www.zhihu.com/question/22689579/answer/22318058" target="_blank" rel="noopener">帖子</a>，对小白比较友好。<br><img src="media/14865634767885/14877736096833.jpg" alt=""></p>
+<h3 id="HTML-amp-HTTP"><a href="#HTML-amp-HTTP" class="headerlink" title="HTML &amp; HTTP"></a>HTML &amp; HTTP</h3><p>HTML:文本，定义网页，可通过CSS JS增加有表现性和交互性<br>HTTP：协议，如何上传HTML,浏览器和服务器如何通信</p>
+<p>网站交互实际上就是在HTTP协议下，请求和响应的循环过程。</p>
+<h3 id="WSGI"><a href="#WSGI" class="headerlink" title="WSGI"></a>WSGI</h3><p>web应用程序，入口都是一个<strong>WSGI处理函数，针对每个HTTP请求进行响应</strong>。</p>
+<p>免去底层代码的工作：包括TCP连接，HTML原始请求和响应格式</p>
+<h3 id="web框架"><a href="#web框架" class="headerlink" title="web框架"></a>web框架</h3><p><strong>多个URL路径和多种请求类型</strong><br>在一个应用中，问题不仅仅在于处理HTTP请求，问题是处理很多个不同的url，每一个都有独立的请求，比如get和post.依次从变量中取出信息，一个个判断，代码很难维护。</p>
+<p><strong>web框架，用来处理url到函数的映射</strong></p>
+<h3 id="flask框架"><a href="#flask框架" class="headerlink" title="flask框架"></a>flask框架</h3><p>flask是小型的，可扩展的的一个web框架。</p>
+<p>安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Yina$ pip3 install flask</span><br></pre></td></tr></table></figure>
+<h3 id="flask扩展"><a href="#flask扩展" class="headerlink" title="flask扩展"></a>flask扩展</h3><p>通过一系列flask扩展的安装，可以体会到扩展的作用，体会作为一种“胶水语言”的编程语言。以下是几种flask扩展。</p>
+<p><strong>Flask-Script 支持命令行选项</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Yina$ pip3 install flask-script</span><br></pre></td></tr></table></figure>
+<p><strong>Flask-Moment 本地化日期和时间</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Yina$ pip3 install flask-moment</span><br></pre></td></tr></table></figure>
+<p><strong>Flask-Bootstrap 响应模版</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Yina$ pip3 install flask-bootstrap</span><br></pre></td></tr></table></figure>
+<p><strong>flask-WTF 扩展处理web 表单</strong><br>对独立的WTForms包进行了包装，把处理web表单变成愉悦的体验</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Yina$ pip3 install flask-wtf</span><br></pre></td></tr></table></figure>
+<h4 id="扩展的初始化"><a href="#扩展的初始化" class="headerlink" title="扩展的初始化"></a>扩展的初始化</h4><p>专为flask开发的扩展都在flask.ext命名空间下。<br>从命名空间导入扩展，把程序实例作为参数，传递给构造函数，初始化主类的实例。<br>创建的对象可以在各个扩展中使用。</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">from flask.ext.script import Manger</span><br><span class="line">from flask.ext.script import Bootstrap</span><br><span class="line">from flask.ext.script import Moment</span><br><span class="line"></span><br><span class="line">manger = Manger(app)</span><br><span class="line">bootstap = Bootstrap(app)</span><br><span class="line">moment = Moment(app)</span><br><span class="line"></span><br><span class="line">#……</span><br><span class="line"></span><br><span class="line">if __name__ == &apos;__main__&apos;:</span><br><span class="line">   manage.run()</span><br></pre></td></tr></table></figure>
+<h3 id="flask的WSGI接口函数"><a href="#flask的WSGI接口函数" class="headerlink" title="flask的WSGI接口函数"></a>flask的WSGI接口函数</h3><p>flask实际上就是一个WSGI的接口函数。<br>该接口函数包括构造函数和视图函数。</p>
+<h4 id="构造函数-Flask类的对象是程序"><a href="#构造函数-Flask类的对象是程序" class="headerlink" title="构造函数:Flask类的对象是程序"></a>构造函数:Flask类的对象是程序</h4><p>程序实例是<code>Flask</code>类的对象。该对象处理来自客户端的所有请求。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">from flask import Flask</span><br><span class="line">app=Flask(__name__)</span><br></pre></td></tr></table></figure>
+<p>Flask 类<br>app是Flask的一个实例，这个实例参数就是程序名称。<br>参数是程序主模块或者包的名字,flask用这个参数决定程序根目录。</p>
+<h4 id="路由，装饰器，视图函数"><a href="#路由，装饰器，视图函数" class="headerlink" title="路由，装饰器，视图函数"></a>路由，装饰器，视图函数</h4><p>路由：程序，处理url和函数之间的关系<br>flask通过python的装饰器在内部自动把url和函数关连起来<br><code>app.route</code>修饰器<br>视图函数<code>index()</code>：返回值是响应</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@app.route(&apos;/&apos;)</span><br><span class="line">def index():</span><br><span class="line">    return &apos;&lt;h1&gt;hello,world!&lt;/h1&gt;&apos;</span><br></pre></td></tr></table></figure>
+<h4 id="run-启动服务器"><a href="#run-启动服务器" class="headerlink" title="run()启动服务器"></a><code>run()</code>启动服务器</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">if __name__=&apos;__main__&apos;:</span><br><span class="line">    app.run(debug=true)</span><br></pre></td></tr></table></figure>
+<p><code>if __name__=&#39;__main__&#39;:</code><br>直接执行该脚本才启动web服务器，如果由其他脚本引入，则不会执行。</p>
+<h4 id="添加一个动态路由"><a href="#添加一个动态路由" class="headerlink" title="添加一个动态路由"></a>添加一个动态路由</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">from flask import Flask</span><br><span class="line">app = Flask(__name__)</span><br><span class="line"></span><br><span class="line">@app.route(&apos;/&apos;)</span><br><span class="line">def index():</span><br><span class="line">    return &apos;&lt;h1&gt;Hello World!&lt;/h1&gt;&apos;</span><br><span class="line">    </span><br><span class="line">@app.route(&apos;/user/&lt;name&gt;&apos;)</span><br><span class="line">def user(name):</span><br><span class="line">    return &apos;&lt;h1&gt;Hello, %s!&lt;/h1&gt;&apos; % name</span><br><span class="line"></span><br><span class="line">if __name__ == &apos;__main__&apos;:</span><br><span class="line">    app.run(debug=True)</span><br></pre></td></tr></table></figure>
+<h3 id="请求-响应循环"><a href="#请求-响应循环" class="headerlink" title="请求-响应循环"></a>请求-响应循环</h3><p>BS的核心就是，浏览器发出请求，服务器作出回应。<br>如此循环往复。</p>
+<h4 id="请求上下文"><a href="#请求上下文" class="headerlink" title="请求上下文"></a>请求上下文</h4><p>请求对象：封装客户端发送的HTTP请求。<br>视图函数如何访问请求对象？<br>将其作为参数传入视图函数。<br>避免大量参数把视图函数弄乱，flask使用<strong>上下文临时把某些对象变为全局可访问</strong>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">from flask import request</span><br><span class="line"></span><br><span class="line">@app.route(&apos;/&apos;)</span><br><span class="line">def index():</span><br><span class="line">user_agent = request.headers.get(&apos;user_agent&apos;)</span><br><span class="line">return&apos;&lt;p&gt;your browser is %s&lt;/p&gt; % user_agent</span><br></pre></td></tr></table></figure>
+<p>flask使用上下文让特定变量在一个线程中全局可访问，同时不干扰其他线程。从而使得request当作全局变量使用。</p>
+<p>程序上下文变量</p>
+<ul>
+<li>current_app</li>
+<li>g</li>
+</ul>
+<p>请求上下文变量</p>
+<ul>
+<li>request</li>
+<li>session</li>
+</ul>
+<p>调用上下文变量之前要激活。</p>
+<h4 id="请求调度：找到处理该请求的视图函数"><a href="#请求调度：找到处理该请求的视图函数" class="headerlink" title="请求调度：找到处理该请求的视图函数"></a>请求调度：找到处理该请求的视图函数</h4><p>URL映射:url和视图函数的对应关系<br>flask生成映射：<code>app.route</code> or <code>app.add_url_rule()</code></p>
+<p>检查映射</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">from f import app</span><br><span class="line">&gt;&gt;&gt; app.url_map</span><br><span class="line">Map([&lt;Rule &apos;/&apos; (HEAD, GET, OPTIONS) -&gt; index&gt;,</span><br><span class="line"> &lt;Rule &apos;/static/&lt;filename&gt;&apos; (HEAD, GET, OPTIONS) -&gt; static&gt;])</span><br></pre></td></tr></table></figure>
+<p>路由：<br>    <code>/</code> app.route定义的路由<br>    <code>/static/&lt;filename&gt;</code> flask添加的特殊路由，访问静态文件<br>请求方法：<br>HEAD, GET, OPTIONS<br>由路由处理，每个路由指定了请求方法</p>
+<h4 id="请求钩子-通用函数"><a href="#请求钩子-通用函数" class="headerlink" title="请求钩子:通用函数"></a>请求钩子:通用函数</h4><p>执行代码和处理请求的顺序</p>
+<p>注册通用函数<br>    避免每个视图函数使用重复代码<br>    注册函数可在请求被分发到视图函数之前或者之后调用</p>
+<p>钩子通过修饰器实现。<br>before_first_request:<br>before_request:<br>after_request:<br>teardown_request:</p>
+<h4 id="响应"><a href="#响应" class="headerlink" title="响应"></a>响应</h4><p>返回值：响应内容<br>参数<br>    字符串：html页面<br>    状态码：200，表明请求已被处理<br>    字典<br>    response对象<br>    重定向<br>    abort函数 </p>
+<h4 id="使用模版生成响应"><a href="#使用模版生成响应" class="headerlink" title="使用模版生成响应"></a>使用模版生成响应</h4><p>业务逻辑和表现逻辑混在一起会导致代码难以理解和维度<br>把表现逻辑迁移到模版中可以提升程序的可维护性</p>
+<p>模板：包含响应文本的<strong>文件</strong>,文件夹：templates,文件名：index.html ..</p>
+<p>渲染<br><code>render_template</code>：用真实值替代变量，在返回得到最终响应字符串<br>jinja2:渲染用的引擎<br><code>render_template</code>参数<br>文件名，键对值</p>
+<p>控制结构<br>在模版中使用条件控制语句，for循环，宏（函数），重复使用可保存在单独文件中<br>模版继承，类似于python代码中的类继承</p>
+<h3 id="通过web表单和用户交互（模版的一个功能）"><a href="#通过web表单和用户交互（模版的一个功能）" class="headerlink" title="通过web表单和用户交互（模版的一个功能）"></a>通过web表单和用户交互（模版的一个功能）</h3><p>跨站请求伪造保护<br>表单类<br>把表单渲染成HTML<br>在视图函数中处理表单<br>重定向和用户会话<br>flash消息</p>
+<h4 id="表单类"><a href="#表单类" class="headerlink" title="表单类"></a>表单类</h4><p>使用Flask-WTF时，每个web表单由一个继承自<code>Form</code>的类表示<br>定义表单中一组字段<br>每个字段用对象表示<br>字段对象可附属一个或者多个验证函数<br>验证函数：验证用户信息提交是否符合要求</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">from flask.ext.wtf import Form</span><br><span class="line">from wtforms import StringField,SubmitField</span><br><span class="line">from wtforms.validators import Required</span><br><span class="line"></span><br><span class="line">class NameForm(Form):</span><br><span class="line">    name = StringField(&apos;what is your name&apos;,validators = [required()])</span><br><span class="line">    submit = SubmitField(&apos;Submit&apos;)</span><br></pre></td></tr></table></figure>
+<h4 id="表单渲染成HTML"><a href="#表单渲染成HTML" class="headerlink" title="表单渲染成HTML"></a>表单渲染成HTML</h4><p>​    </p>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><h4 id="python版本管理-pyenv"><a href="#python版本管理-pyenv" class="headerlink" title="python版本管理 pyenv"></a>python版本管理 pyenv</h4><p>小白进阶路线图中有提到过python环境配置，其中有一条是通过pyenv来管理python版本。测试一下，之前有装过，但是没有用过。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">jiangyinadeMacBook-Pro:desktop Yina$ pyenv</span><br><span class="line">pyenv 1.0.6</span><br><span class="line">Usage: pyenv &lt;command&gt; [&lt;args&gt;]</span><br></pre></td></tr></table></figure>
+<h4 id="创建虚拟环境"><a href="#创建虚拟环境" class="headerlink" title="创建虚拟环境"></a>创建虚拟环境</h4><p>《flash web开发》中建议在虚拟环境中开发，但是我还是不是很会使用虚拟环境。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">jiangyinadeMacBook-Pro:~ Yina$ git clone http://github.com/miguelgrinberg/flasky.git</span><br><span class="line">Cloning into &apos;flasky&apos;...</span><br><span class="line">remote: Counting objects: 830, done.</span><br><span class="line">remote: Total 830 (delta 0), reused 0 (delta 0), pack-reused 830</span><br><span class="line">Receiving objects: 100% (830/830), 140.72 KiB | 220.00 KiB/s, done.</span><br><span class="line">Resolving deltas: 100% (462/462), done.</span><br><span class="line">jiangyinadeMacBook-Pro:~ Yina$ cd flasky</span><br><span class="line">jiangyinadeMacBook-Pro:flasky Yina$ git checkout 1a</span><br><span class="line">Note: checking out &apos;1a&apos;.</span><br><span class="line"></span><br><span class="line">You are in &apos;detached HEAD&apos; state. You can look around, make experimental</span><br><span class="line">changes and commit them, and you can discard any commits you make in this</span><br><span class="line">state without impacting any branches by performing another checkout.</span><br><span class="line"></span><br><span class="line">If you want to create a new branch to retain commits you create, you may</span><br><span class="line">do so (now or later) by using -b with the checkout command again. Example:</span><br><span class="line"></span><br><span class="line">  git checkout -b &lt;new-branch-name&gt;</span><br><span class="line"></span><br><span class="line">HEAD is now at e4777c9... Chapter 1: initial version (1a)</span><br></pre></td></tr></table></figure>
+<h1 id="公网版天气查询系统"><a href="#公网版天气查询系统" class="headerlink" title="公网版天气查询系统"></a>公网版天气查询系统</h1><h3 id="目标：把应用搬到云端"><a href="#目标：把应用搬到云端" class="headerlink" title="目标：把应用搬到云端"></a>目标：把应用搬到云端</h3><p>将自己的应用由内网搬到公网<br>可以在任意设备访问你的应用<br>尝试自动化部署应用<br>本章任务:完成一个公网版天气查询程序<br>部署在云端，比如部署在 Heroku 上<br>实现以下基本功能：<br>输入城市名，获取该城市最新天气情况<br>点击「帮助」，获取帮助信息<br>点击「历史」，获取历史查询信息<br>进阶任务:将天气数据封装成 API，供别人调用</p>
+<p>PaaS:platform as a service<br>SAE<br>阿里云<br>Daocloud</p>
+<p>Heroku<br>Heroku ：是一个支持多种编程语言的云平台，使用 Heroku 建立应用</p>
+<h3 id="最小flask应用在heroku的部署记录"><a href="#最小flask应用在heroku的部署记录" class="headerlink" title="最小flask应用在heroku的部署记录"></a>最小flask应用在heroku的部署记录</h3><p>查看当前文件，有一个app.py</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">jiangyinadeMacBook-Pro:flask-deploy Yina$ ls</span><br><span class="line">app.py</span><br></pre></td></tr></table></figure>
+<h4 id="pip-freeze"><a href="#pip-freeze" class="headerlink" title="pip freeze"></a>pip freeze</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">jiangyinadeMacBook-Pro:flask-deploy Yina$ pip freeze</span><br><span class="line">click==6.7</span><br><span class="line">Flask==0.12</span><br><span class="line">gunicorn==19.6.0</span><br><span class="line">itsdangerous==0.24</span><br><span class="line">Jinja2==2.9.5</span><br><span class="line">MarkupSafe==0.23</span><br><span class="line">requests==2.13.0</span><br></pre></td></tr></table></figure>
+<h4 id="requirements-txt文件"><a href="#requirements-txt文件" class="headerlink" title="requirements.txt文件"></a>requirements.txt文件</h4><p>记录了当前程序的所有依赖包及其精确版本号。</p>
+<p>作用是用来在另一台PC上重新构建项目所需要的运行环境依赖。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jiangyinadeMacBook-Pro:flask-deploy Yina$ pip freeze &gt; requirements.txt</span><br></pre></td></tr></table></figure>
+<p>检查一下，在文件夹中，多了requirements.txt 这个文档。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">jiangyinadeMacBook-Pro:flask-deploy Yina$ ls</span><br><span class="line">app.py			requirements.txt</span><br></pre></td></tr></table></figure>
+<h4 id="Procfile文件"><a href="#Procfile文件" class="headerlink" title="Procfile文件"></a>Procfile文件</h4><p>把一个Procfile文件放入文件夹。<br>文件名没有任何后缀。<br>文件要放在代码的根目录。<br>文件写入需要运行的命令。格式：<br>name:command</p>
+<p>文件内容：<br>web: gunicorn app:app</p>
+<p>web：这个进程类型将会连接到Heroku的HTTP路由栈，在部署时接收web流量<br>gunicorn： 用于运行web的执行指令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">jiangyinadeMacBook-Pro:flask-deploy Yina$ ls</span><br><span class="line">Procfile		app.py</span><br><span class="line">requirements.txt</span><br></pre></td></tr></table></figure>
+<h4 id="运行python，进行确认"><a href="#运行python，进行确认" class="headerlink" title="运行python，进行确认"></a>运行python，进行确认</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">jiangyinadeMacBook-Pro:flask-deploy Yina$ python app.py</span><br><span class="line"> * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)</span><br><span class="line">127.0.0.1 - - [26/Feb/2017 23:48:49] &quot;GET / HTTP/1.1&quot; 200 -</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">^CjiangyinadeMacBook-Pro:flask-deploy Yina$ ls</span><br><span class="line">Procfile		app.py			requirements.txt</span><br></pre></td></tr></table></figure>
+<h4 id="登陆heroku"><a href="#登陆heroku" class="headerlink" title="登陆heroku"></a>登陆heroku</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">jiangyinadeMacBook-Pro:flask-deploy Yina$ heroku login</span><br><span class="line">Enter your Heroku credentials.</span><br><span class="line">Email: niceyina@gmail.com</span><br><span class="line">Password (typing will be hidden): </span><br><span class="line">Logged in as niceyina@gmail.com</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">jiangyinadeMacBook-Pro:flask-deploy Yina$ git status</span><br><span class="line">On branch master</span><br><span class="line"></span><br><span class="line">Initial commit</span><br><span class="line"></span><br><span class="line">Untracked files:</span><br><span class="line">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)</span><br><span class="line"></span><br><span class="line">	Procfile</span><br><span class="line">	app.py</span><br><span class="line">	requirements.txt</span><br><span class="line"></span><br><span class="line">nothing added to commit but untracked files present (use &quot;git add&quot; to track)</span><br></pre></td></tr></table></figure>
+<p>jiangyinadeMacBook-Pro:flask-deploy Yina$ git remote</p>
+<h4 id="初始化本地仓库"><a href="#初始化本地仓库" class="headerlink" title="初始化本地仓库"></a>初始化本地仓库</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">jiangyinadeMacBook-Pro:flask-deploy Yina$ git init</span><br><span class="line">Reinitialized existing Git repository in /Users/Yina/Desktop/flask-deploy/.git/</span><br></pre></td></tr></table></figure>
+<h4 id="在heroku创建新应用"><a href="#在heroku创建新应用" class="headerlink" title="在heroku创建新应用"></a>在heroku创建新应用</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">jiangyinadeMacBook-Pro:flask-deploy Yina$ heroku create --buildpack heroku/python</span><br><span class="line">Creating app... done, ⬢ fathomless-gorge-35476</span><br><span class="line">Setting buildpack to heroku/python... done</span><br><span class="line">https://fathomless-gorge-35476.herokuapp.com/ | https://git.heroku.com/fathomless-gorge-35476.git</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">jiangyinadeMacBook-Pro:flask-deploy Yina$ git remote</span><br><span class="line">heroku</span><br><span class="line"></span><br><span class="line">jiangyinadeMacBook-Pro:flask-deploy Yina$ git status</span><br><span class="line">On branch master</span><br><span class="line"></span><br><span class="line">Initial commit</span><br><span class="line"></span><br><span class="line">Untracked files:</span><br><span class="line">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)</span><br><span class="line"></span><br><span class="line">	Procfile</span><br><span class="line">	app.py</span><br><span class="line">	requirements.txt</span><br><span class="line"></span><br><span class="line">nothing added to commit but untracked files present (use &quot;git add&quot; to track)</span><br></pre></td></tr></table></figure>
+<h4 id="和heroku上的仓库关联"><a href="#和heroku上的仓库关联" class="headerlink" title="和heroku上的仓库关联"></a>和heroku上的仓库关联</h4><p>2次错误操作</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">jiangyinadeMacBook-Pro:flask-deploy Yina$ heroku git:remote -a flask-deploy</span><br><span class="line"> ▸    You do not have access to the app flask-deploy.</span><br><span class="line"></span><br><span class="line">jiangyinadeMacBook-Pro:flask-deploy Yina$ git:remote -a fathomless-gorge-35476</span><br><span class="line">-bash: git:remote: command not found</span><br></pre></td></tr></table></figure>
+<p>正确操作</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">jiangyinadeMacBook-Pro:flask-deploy Yina$ heroku git:remote -a fathomless-gorge-35476</span><br><span class="line">set git remote heroku to https://git.heroku.com/fathomless-gorge-35476.git</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">jiangyinadeMacBook-Pro:flask-deploy Yina$ git remote -v</span><br><span class="line">heroku	https://git.heroku.com/fathomless-gorge-35476.git (fetch)</span><br><span class="line">heroku	https://git.heroku.com/fathomless-gorge-35476.git (push)</span><br><span class="line"></span><br><span class="line">jiangyinadeMacBook-Pro:flask-deploy Yina$ git status</span><br><span class="line">On branch master</span><br><span class="line"></span><br><span class="line">Initial commit</span><br><span class="line"></span><br><span class="line">Untracked files:</span><br><span class="line">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)</span><br><span class="line"></span><br><span class="line">	Procfile</span><br><span class="line">	app.py</span><br><span class="line">	requirements.txt</span><br><span class="line"></span><br><span class="line">nothing added to commit but untracked files present (use &quot;git add&quot; to track)</span><br></pre></td></tr></table></figure>
+<h4 id="提交更新，建立版本"><a href="#提交更新，建立版本" class="headerlink" title="提交更新，建立版本"></a>提交更新，建立版本</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">jiangyinadeMacBook-Pro:flask-deploy Yina$ git add .</span><br><span class="line"></span><br><span class="line">jiangyinadeMacBook-Pro:flask-deploy Yina$ git commit -m &quot;firsttry&quot;</span><br><span class="line">[master (root-commit) 9bee709] firsttry</span><br><span class="line"> 3 files changed, 21 insertions(+)</span><br><span class="line"> create mode 100644 Procfile</span><br><span class="line"> create mode 100644 app.py</span><br><span class="line"> create mode 100644 requirements.txt</span><br></pre></td></tr></table></figure>
+<h4 id="推送到heroku远程仓库"><a href="#推送到heroku远程仓库" class="headerlink" title="推送到heroku远程仓库"></a>推送到heroku远程仓库</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">jiangyinadeMacBook-Pro:flask-deploy Yina$ git push heroku master</span><br><span class="line">Counting objects: 5, done.</span><br><span class="line">Delta compression using up to 4 threads.</span><br><span class="line">Compressing objects: 100% (4/4), done.</span><br><span class="line">Writing objects: 100% (5/5), 544 bytes | 0 bytes/s, done.</span><br><span class="line">Total 5 (delta 0), reused 0 (delta 0)</span><br><span class="line">remote: Compressing source files... done.</span><br><span class="line">remote: Building source:</span><br><span class="line">remote: </span><br><span class="line">remote: -----&gt; Python app detected</span><br><span class="line">remote: -----&gt; Installing python-2.7.13</span><br><span class="line">remote:      $ pip install -r requirements.txt</span><br><span class="line">remote:        Collecting click==6.7 (from -r /tmp/build_187f6f6b2265aa103466132b777181bb/requirements.txt (line 1))</span><br><span class="line">remote:          Downloading click-6.7-py2.py3-none-any.whl (71kB)</span><br><span class="line">remote:        Collecting Flask==0.12 (from -r /tmp/build_187f6f6b2265aa103466132b777181bb/requirements.txt (line 2))</span><br><span class="line">remote:          Downloading Flask-0.12-py2.py3-none-any.whl (82kB)</span><br><span class="line">remote:        Collecting gunicorn==19.6.0 (from -r /tmp/build_187f6f6b2265aa103466132b777181bb/requirements.txt (line 3))</span><br><span class="line">remote:          Downloading gunicorn-19.6.0-py2.py3-none-any.whl (114kB)</span><br><span class="line">remote:        Collecting itsdangerous==0.24 (from -r /tmp/build_187f6f6b2265aa103466132b777181bb/requirements.txt (line 4))</span><br><span class="line">remote:          Downloading itsdangerous-0.24.tar.gz (46kB)</span><br><span class="line">remote:        Collecting Jinja2==2.9.5 (from -r /tmp/build_187f6f6b2265aa103466132b777181bb/requirements.txt (line 5))</span><br><span class="line">remote:          Downloading Jinja2-2.9.5-py2.py3-none-any.whl (340kB)</span><br><span class="line">remote:        Collecting MarkupSafe==0.23 (from -r /tmp/build_187f6f6b2265aa103466132b777181bb/requirements.txt (line 6))</span><br><span class="line">remote:          Downloading MarkupSafe-0.23.tar.gz</span><br><span class="line">remote:        Collecting requests==2.13.0 (from -r /tmp/build_187f6f6b2265aa103466132b777181bb/requirements.txt (line 7))</span><br><span class="line">remote:          Downloading requests-2.13.0-py2.py3-none-any.whl (584kB)</span><br><span class="line">remote:        Collecting virtualenv==15.1.0 (from -r /tmp/build_187f6f6b2265aa103466132b777181bb/requirements.txt (line 8))</span><br><span class="line">remote:          Downloading virtualenv-15.1.0-py2.py3-none-any.whl (1.8MB)</span><br><span class="line">remote:        Collecting Werkzeug==0.11.15 (from -r /tmp/build_187f6f6b2265aa103466132b777181bb/requirements.txt (line 9))</span><br><span class="line">remote:          Downloading Werkzeug-0.11.15-py2.py3-none-any.whl (307kB)</span><br><span class="line">remote:        Installing collected packages: click, itsdangerous, Werkzeug, MarkupSafe, Jinja2, Flask, gunicorn, requests, virtualenv</span><br><span class="line">remote:          Running setup.py install for itsdangerous: started</span><br><span class="line">remote:            Running setup.py install for itsdangerous: finished with status &apos;done&apos;</span><br><span class="line">remote:          Running setup.py install for MarkupSafe: started</span><br><span class="line">remote:            Running setup.py install for MarkupSafe: finished with status &apos;done&apos;</span><br><span class="line">remote:        Successfully installed Flask-0.12 Jinja2-2.9.5 MarkupSafe-0.23 Werkzeug-0.11.15 click-6.7 gunicorn-19.6.0 itsdangerous-0.24 requests-2.13.0 virtualenv-15.1.0</span><br><span class="line">remote: </span><br><span class="line">remote: -----&gt; Discovering process types</span><br><span class="line">remote:        Procfile declares types -&gt; web</span><br><span class="line">remote: </span><br><span class="line">remote: -----&gt; Compressing...</span><br><span class="line">remote:        Done: 40.6M</span><br><span class="line">remote: -----&gt; Launching...</span><br><span class="line">remote:        Released v3</span><br><span class="line">remote:        https://fathomless-gorge-35476.herokuapp.com/ deployed to Heroku</span><br><span class="line">remote: </span><br><span class="line">remote: Verifying deploy... done.</span><br><span class="line">To https://git.heroku.com/fathomless-gorge-35476.git</span><br><span class="line"> * [new branch]      master -&gt; master</span><br><span class="line">jiangyinadeMacBook-Pro:flask-deploy Yina$</span><br></pre></td></tr></table></figure>
+<h1 id="微信服务版天气查询程序"><a href="#微信服务版天气查询程序" class="headerlink" title="微信服务版天气查询程序"></a>微信服务版天气查询程序</h1><h3 id="任务"><a href="#任务" class="headerlink" title="任务"></a>任务</h3><p>ch7 目标：让用户通过微信和你的应用交互</p>
+<p>微信公众号开发:把应用部署到微信公众号的后台</p>
+<h3 id="SAE"><a href="#SAE" class="headerlink" title="SAE"></a>SAE</h3><p><img src="media/14885566591857/14886377111380.jpg" alt=""></p>
+<p><img src="media/14885566591857/14886422175914.jpg" alt=""></p>
+<p>请 把weatherquery.applinzi.com CNAME到weatherquery.applinzi.com，并 把a8e3c1d620.applinzi.com通过A记录解析到43.115.2.181完成域名身份验证。 域名身份验证将在SAE获取到相关DNS记录后完成（由于各地DNS Cache的影响，此过程可能需要较长时间，但一般情况下在您解析完验证域名后一天之内能完成验证）。 验证通过后，会自动为您完成域名绑定</p>
+<h1 id="还记得最初的目标嘛"><a href="#还记得最初的目标嘛" class="headerlink" title="还记得最初的目标嘛"></a>还记得最初的目标嘛</h1><p>在一开始的卡包里，大妈说：</p>
+<blockquote>
+<p>“可以自己解决问题，是学习编程的根因之一。”</p>
+</blockquote>
+<p>知乎上，肖井陌写的<a href="https://zhuanlan.zhihu.com/p/19959253" target="_blank" rel="noopener">编程入门指南</a>说：</p>
+<blockquote>
+<p>这篇文章是写给那些真心想学编程的人看的——那些憋着一股狠劲，一定要做出什么真东西，不学好不罢休的人；而不是那些“听说编程好玩”的人，在我看来，这种人永远都入不了编程的门，更别提做出个像样的东西来了。</p>
+</blockquote>
+<p>这给我很大的警醒。学编程，必须有所出。如果没有像样的输出，一定是学无所得。我认真写了24k纯小白的教程，然而我如果无法实现哪怕一个我想解决的问题的话，教程就只剩鸡汤和缺乏系统的知识，毫无说服力了。</p>
+<p>回到第一部分，初学编程正念，最主要的就是不断反思自己为什么学习python，找自己想要解决的问题。</p>
+<p>考虑到我是纯小白，设置了第二个筛选条件：实现难度不要超过我的能力。</p>
+<p>基于以上2个，我提出以上这个项目。</p>
+<ul>
+<li><p><strong>功能：</strong><br>抓取用户在新浪微博中的历史记录，获得纯文本信息</p>
+</li>
+<li><p><strong>价值点：</strong></p>
+</li>
+</ul>
+<ul>
+<li>好的想法都在平时点滴搜集。时间积累的想法会有很大的价值</li>
+<li>把内容完全托管第三方平台是有风险的。因为，它们会因为各种原因审核内容，让微博内容甚至账号消失</li>
+</ul>
+<p>这是我真的想做，并且功能少，感觉比较容易实现的功能。</p>
+<p>实现后，之后我希望再做一些拓展。我本人很想更深入对自然语言的文本做质性分析。这个功能可以帮助我快速搜集文本数据。</p>
+<h1 id="“我的档案”——新浪微博个人文本抓取项目"><a href="#“我的档案”——新浪微博个人文本抓取项目" class="headerlink" title="“我的档案”——新浪微博个人文本抓取项目"></a>“我的档案”——新浪微博个人文本抓取项目</h1><p><a href="https://github.com/yiiina/mymemory-at-weibo" target="_blank" rel="noopener">仓库地址</a></p>
+<h3 id="项目概述"><a href="#项目概述" class="headerlink" title="项目概述"></a>项目概述</h3><p><strong>你在微博记录的美好小时光，迸发的思想火花，“我的档案”帮你备份</strong></p>
+<h3 id="项目简介"><a href="#项目简介" class="headerlink" title="项目简介"></a>项目简介</h3><p><strong>功能：</strong><br>抓取用户在新浪微博中的历史记录，获得纯文本信息</p>
+<p><strong>价值点：</strong></p>
+<ul>
+<li>好的想法都在平时点滴搜集。时间积累的想法会有很大的价值</li>
+<li>把内容完全托管第三方平台是有风险的。因为，它们会因为各种原因审核内容，让微博内容甚至账号消失</li>
+</ul>
+<p><strong>目标用户：</strong></p>
+<ul>
+<li>长期在微博上进行创作，把自己想法写在微博上。</li>
+<li>希望定期以文本的方式备份自己在微博上的内容。</li>
+</ul>
+<h3 id="项目执行方案"><a href="#项目执行方案" class="headerlink" title="项目执行方案"></a>项目执行方案</h3><h4 id="MVP-的核心功能是哪些？"><a href="#MVP-的核心功能是哪些？" class="headerlink" title="MVP 的核心功能是哪些？"></a>MVP 的核心功能是哪些？</h4><p>命令行界面完成<br>输入微博账号<br>输出该账号下的微博文本</p>
+<h4 id="开发的功能排期"><a href="#开发的功能排期" class="headerlink" title="开发的功能排期"></a>开发的功能排期</h4><p>3.6-3.10 自由探索任务的思路<br>3.11-3.12 碰头任务思路，任务分工<br>3.13-3.17 完成任务<br>3.17  19:42之前报名路演，确认顺序<br>3.19-3.22 项目路演（微信群或者开智学堂APP的直播间）</p>
+<h1 id="项目思路"><a href="#项目思路" class="headerlink" title="项目思路"></a>项目思路</h1><h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><ul>
+<li>微博的网址url</li>
+<li>用户账号</li>
+</ul>
+<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><ul>
+<li>网页文本数据</li>
+</ul>
+<h3 id="处理过程分析"><a href="#处理过程分析" class="headerlink" title="处理过程分析"></a>处理过程分析</h3><h4 id="程序如何和网页发出请求，返回数据？"><a href="#程序如何和网页发出请求，返回数据？" class="headerlink" title="程序如何和网页发出请求，返回数据？"></a>程序如何和网页发出请求，返回数据？</h4><p>需要和网页进行交互，HTTP 协议。</p>
+<h4 id="选择什么模块-urllib-requests-bs4"><a href="#选择什么模块-urllib-requests-bs4" class="headerlink" title="选择什么模块 urllib requests bs4"></a>选择什么模块 urllib requests bs4</h4><p>使用requests模块，对请求和接收的数据进行封装，通过HTTP协议传输数据。</p>
+<h4 id="数据如何处理"><a href="#数据如何处理" class="headerlink" title="数据如何处理"></a>数据如何处理</h4><h4 id="正则式表达是什么？"><a href="#正则式表达是什么？" class="headerlink" title="正则式表达是什么？"></a>正则式表达是什么？</h4><h4 id="如何处理微博的反爬虫技术"><a href="#如何处理微博的反爬虫技术" class="headerlink" title="如何处理微博的反爬虫技术"></a>如何处理微博的反爬虫技术</h4><p>新浪微博的页面都是通过加密处理的吧,无法通过bs等来直接获取，尝试一下手机端的页面<a href="http://weibo.cn" target="_blank" rel="noopener">http://weibo.cn</a>   </p>
+<p><a href="https://passport.weibo.cn/signin/welcome?entry=mweibo&amp;r=http%3A%2F%2Fm.weibo.cn%2F" target="_blank" rel="noopener">https://passport.weibo.cn/signin/welcome?entry=mweibo&amp;r=http%3A%2F%2Fm.weibo.cn%2F</a></p>
+<h1 id="项目记录"><a href="#项目记录" class="headerlink" title="项目记录"></a>项目记录</h1><h3 id="建立仓库"><a href="#建立仓库" class="headerlink" title="建立仓库"></a>建立仓库</h3><p>在github新建仓库</p>
+<p><img src="media/14892434101582/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-03-11%20%E4%B8%8B%E5%8D%8810.45.09.png" alt="屏幕快照 2017-03-11 下午10.45.09"></p>
+<p>选择第二种方法，在命令行界面，用git命令，建立和github关联的本地仓库  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">Yina$ cd /Users/Yina/Desktop/mymemory-at-weibo</span><br><span class="line">jiangyinadeMacBook-Pro:mymemory-at-weibo Yina$ echo &quot;mymemory-at-weibo&quot;&gt;&gt;README.md</span><br><span class="line">jiangyinadeMacBook-Pro:mymemory-at-weibo Yina$ git init</span><br><span class="line">Initialized empty Git repository in /Users/Yina/Desktop/mymemory-at-weibo/.git/</span><br><span class="line">jiangyinadeMacBook-Pro:mymemory-at-weibo Yina$ git status</span><br><span class="line">On branch master</span><br><span class="line"></span><br><span class="line">Initial commit</span><br><span class="line"></span><br><span class="line">Untracked files:</span><br><span class="line">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)</span><br><span class="line"></span><br><span class="line">	README.md</span><br><span class="line"></span><br><span class="line">nothing added to commit but untracked files present (use &quot;git add&quot; to track)</span><br><span class="line">jiangyinadeMacBook-Pro:mymemory-at-weibo Yina$ git add README.md</span><br><span class="line">jiangyinadeMacBook-Pro:mymemory-at-weibo Yina$ git status</span><br><span class="line">On branch master</span><br><span class="line"></span><br><span class="line">Initial commit</span><br><span class="line"></span><br><span class="line">Changes to be committed:</span><br><span class="line">  (use &quot;git rm --cached &lt;file&gt;...&quot; to unstage)</span><br><span class="line"></span><br><span class="line">	new file:   README.md</span><br><span class="line"></span><br><span class="line">jiangyinadeMacBook-Pro:mymemory-at-weibo Yina$ git commit -m &quot;first commit&quot;</span><br><span class="line">[master (root-commit) 2a928c6] first commit</span><br><span class="line"> 1 file changed, 1 insertion(+)</span><br><span class="line"> create mode 100644 README.md</span><br><span class="line">jiangyinadeMacBook-Pro:mymemory-at-weibo Yina$ git remote add origin https://github.com/yiiina/mymemory-at-weibo.git</span><br><span class="line">jiangyinadeMacBook-Pro:mymemory-at-weibo Yina$ git push -u origin master</span><br><span class="line">Counting objects: 3, done.</span><br><span class="line">Writing objects: 100% (3/3), 226 bytes | 0 bytes/s, done.</span><br><span class="line">Total 3 (delta 0), reused 0 (delta 0)</span><br><span class="line">To https://github.com/yiiina/mymemory-at-weibo.git</span><br><span class="line"> * [new branch]      master -&gt; master</span><br><span class="line">Branch master set up to track remote branch master from origin.</span><br><span class="line">jiangyinadeMacBook-Pro:mymemory-at-weibo Yina$</span><br></pre></td></tr></table></figure>
+<p>加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令</p>
+<p>第二次推送：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">jiangyinadeMacBook-Pro:mymemory-at-weibo Yina$ git push </span><br><span class="line">Counting objects: 3, done.</span><br><span class="line">Delta compression using up to 4 threads.</span><br><span class="line">Compressing objects: 100% (2/2), done.</span><br><span class="line">Writing objects: 100% (3/3), 684 bytes | 0 bytes/s, done.</span><br><span class="line">Total 3 (delta 0), reused 0 (delta 0)</span><br><span class="line">To https://github.com/yiiina/mymemory-at-weibo.git</span><br><span class="line">   2a928c6..d98e377  master -&gt; master</span><br></pre></td></tr></table></figure>
+<h3 id="处理微博的反爬虫技术"><a href="#处理微博的反爬虫技术" class="headerlink" title="处理微博的反爬虫技术"></a>处理微博的反爬虫技术</h3><p>新浪微博的页面都是通过加密处理的吧,无法通过bs等来直接获取，尝试一下手机端的页面<a href="http://weibo.cn" target="_blank" rel="noopener">http://weibo.cn</a>   </p>
+<p><a href="https://passport.weibo.cn/signin/welcome?entry=mweibo&amp;r=http%3A%2F%2Fm.weibo.cn%2F" target="_blank" rel="noopener">https://passport.weibo.cn/signin/welcome?entry=mweibo&amp;r=http%3A%2F%2Fm.weibo.cn%2F</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/21/2018-11-23 纯小白的Python教程 V4.0-2/" rel="next" title="小白学前的必学求生姿势">
+                <i class="fa fa-chevron-left"></i> 小白学前的必学求生姿势
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/11/21/2018-11-23 纯小白的Python教程 V4.0_1/" rel="prev" title="前言|教6个月前的自己编程">
+                前言|教6个月前的自己编程 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Yina</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#天气查询工具"><span class="nav-number">1.</span> <span class="nav-text">天气查询工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#任务拆解：解决问题的思路"><span class="nav-number">1.0.1.</span> <span class="nav-text">任务拆解：解决问题的思路</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#流程控制程序"><span class="nav-number">1.0.1.1.</span> <span class="nav-text">流程控制程序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#quit-简单"><span class="nav-number">1.0.1.2.</span> <span class="nav-text">quit #简单</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#help-简单"><span class="nav-number">1.0.1.3.</span> <span class="nav-text">help #简单</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输入城市名，获取该城市的天气情况-困难"><span class="nav-number">1.0.1.4.</span> <span class="nav-text">输入城市名，获取该城市的天气情况 # 困难</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#难点击破"><span class="nav-number">1.0.2.</span> <span class="nav-text">难点击破</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#查询天气"><span class="nav-number">1.0.2.1.</span> <span class="nav-text">查询天气</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码"><span class="nav-number">1.0.2.2.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#可查即时数据的天气查询工具"><span class="nav-number">2.</span> <span class="nav-text">可查即时数据的天气查询工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#任务拆解：解决问题的思路-1"><span class="nav-number">2.0.1.</span> <span class="nav-text">任务拆解：解决问题的思路</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#任务1代码分析"><span class="nav-number">2.0.1.1.</span> <span class="nav-text">任务1代码分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#新任务拆解"><span class="nav-number">2.0.1.2.</span> <span class="nav-text">新任务拆解</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何实现实时数据查询：API调用"><span class="nav-number">2.0.1.3.</span> <span class="nav-text">如何实现实时数据查询：API调用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装requests模块，通过request模块和API交互-发送请求"><span class="nav-number">2.0.1.4.</span> <span class="nav-text">安装requests模块，通过request模块和API交互,发送请求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#选择心知天气的-API"><span class="nav-number">2.0.1.5.</span> <span class="nav-text">选择心知天气的 API</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是JSON，JSON的数据结构，JSON的数据和python数据的转化"><span class="nav-number">2.0.1.6.</span> <span class="nav-text">什么是JSON，JSON的数据结构，JSON的数据和python数据的转化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#返回的数据结构分析"><span class="nav-number">2.0.1.7.</span> <span class="nav-text">返回的数据结构分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#load-把JSON的数据，转成python的数据"><span class="nav-number">2.0.1.8.</span> <span class="nav-text">load()把JSON的数据，转成python的数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用request发送请求：post-or-get"><span class="nav-number">2.0.1.9.</span> <span class="nav-text">使用request发送请求：post or get?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#需要输出的是什么类型的数据"><span class="nav-number">2.0.1.10.</span> <span class="nav-text">需要输出的是什么类型的数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何获取数据呢-——-通过函数，返回需要的数据"><span class="nav-number">2.0.1.11.</span> <span class="nav-text">如何获取数据呢? —— 通过函数，返回需要的数据</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#内网版天气查询系统"><span class="nav-number">3.</span> <span class="nav-text">内网版天气查询系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#任务分析（更新）"><span class="nav-number">3.1.</span> <span class="nav-text">任务分析（更新）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#web建站基础知识"><span class="nav-number">3.2.</span> <span class="nav-text">web建站基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CS-amp-BS"><span class="nav-number">3.2.1.</span> <span class="nav-text">CS &amp; BS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BS关键词"><span class="nav-number">3.2.2.</span> <span class="nav-text">BS关键词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML-amp-HTTP"><span class="nav-number">3.2.3.</span> <span class="nav-text">HTML &amp; HTTP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WSGI"><span class="nav-number">3.2.4.</span> <span class="nav-text">WSGI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#web框架"><span class="nav-number">3.2.5.</span> <span class="nav-text">web框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flask框架"><span class="nav-number">3.2.6.</span> <span class="nav-text">flask框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flask扩展"><span class="nav-number">3.2.7.</span> <span class="nav-text">flask扩展</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#扩展的初始化"><span class="nav-number">3.2.7.1.</span> <span class="nav-text">扩展的初始化</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flask的WSGI接口函数"><span class="nav-number">3.2.8.</span> <span class="nav-text">flask的WSGI接口函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#构造函数-Flask类的对象是程序"><span class="nav-number">3.2.8.1.</span> <span class="nav-text">构造函数:Flask类的对象是程序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#路由，装饰器，视图函数"><span class="nav-number">3.2.8.2.</span> <span class="nav-text">路由，装饰器，视图函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#run-启动服务器"><span class="nav-number">3.2.8.3.</span> <span class="nav-text">run()启动服务器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加一个动态路由"><span class="nav-number">3.2.8.4.</span> <span class="nav-text">添加一个动态路由</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#请求-响应循环"><span class="nav-number">3.2.9.</span> <span class="nav-text">请求-响应循环</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#请求上下文"><span class="nav-number">3.2.9.1.</span> <span class="nav-text">请求上下文</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#请求调度：找到处理该请求的视图函数"><span class="nav-number">3.2.9.2.</span> <span class="nav-text">请求调度：找到处理该请求的视图函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#请求钩子-通用函数"><span class="nav-number">3.2.9.3.</span> <span class="nav-text">请求钩子:通用函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#响应"><span class="nav-number">3.2.9.4.</span> <span class="nav-text">响应</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用模版生成响应"><span class="nav-number">3.2.9.5.</span> <span class="nav-text">使用模版生成响应</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通过web表单和用户交互（模版的一个功能）"><span class="nav-number">3.2.10.</span> <span class="nav-text">通过web表单和用户交互（模版的一个功能）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#表单类"><span class="nav-number">3.2.10.1.</span> <span class="nav-text">表单类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#表单渲染成HTML"><span class="nav-number">3.2.10.2.</span> <span class="nav-text">表单渲染成HTML</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他"><span class="nav-number">3.2.11.</span> <span class="nav-text">其他</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#python版本管理-pyenv"><span class="nav-number">3.2.11.1.</span> <span class="nav-text">python版本管理 pyenv</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建虚拟环境"><span class="nav-number">3.2.11.2.</span> <span class="nav-text">创建虚拟环境</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#公网版天气查询系统"><span class="nav-number">4.</span> <span class="nav-text">公网版天气查询系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#目标：把应用搬到云端"><span class="nav-number">4.0.1.</span> <span class="nav-text">目标：把应用搬到云端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最小flask应用在heroku的部署记录"><span class="nav-number">4.0.2.</span> <span class="nav-text">最小flask应用在heroku的部署记录</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#pip-freeze"><span class="nav-number">4.0.2.1.</span> <span class="nav-text">pip freeze</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#requirements-txt文件"><span class="nav-number">4.0.2.2.</span> <span class="nav-text">requirements.txt文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Procfile文件"><span class="nav-number">4.0.2.3.</span> <span class="nav-text">Procfile文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#运行python，进行确认"><span class="nav-number">4.0.2.4.</span> <span class="nav-text">运行python，进行确认</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#登陆heroku"><span class="nav-number">4.0.2.5.</span> <span class="nav-text">登陆heroku</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#初始化本地仓库"><span class="nav-number">4.0.2.6.</span> <span class="nav-text">初始化本地仓库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在heroku创建新应用"><span class="nav-number">4.0.2.7.</span> <span class="nav-text">在heroku创建新应用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#和heroku上的仓库关联"><span class="nav-number">4.0.2.8.</span> <span class="nav-text">和heroku上的仓库关联</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#提交更新，建立版本"><span class="nav-number">4.0.2.9.</span> <span class="nav-text">提交更新，建立版本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#推送到heroku远程仓库"><span class="nav-number">4.0.2.10.</span> <span class="nav-text">推送到heroku远程仓库</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#微信服务版天气查询程序"><span class="nav-number">5.</span> <span class="nav-text">微信服务版天气查询程序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#任务"><span class="nav-number">5.0.1.</span> <span class="nav-text">任务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SAE"><span class="nav-number">5.0.2.</span> <span class="nav-text">SAE</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#还记得最初的目标嘛"><span class="nav-number">6.</span> <span class="nav-text">还记得最初的目标嘛</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#“我的档案”——新浪微博个人文本抓取项目"><span class="nav-number">7.</span> <span class="nav-text">“我的档案”——新浪微博个人文本抓取项目</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#项目概述"><span class="nav-number">7.0.1.</span> <span class="nav-text">项目概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目简介"><span class="nav-number">7.0.2.</span> <span class="nav-text">项目简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目执行方案"><span class="nav-number">7.0.3.</span> <span class="nav-text">项目执行方案</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#MVP-的核心功能是哪些？"><span class="nav-number">7.0.3.1.</span> <span class="nav-text">MVP 的核心功能是哪些？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#开发的功能排期"><span class="nav-number">7.0.3.2.</span> <span class="nav-text">开发的功能排期</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#项目思路"><span class="nav-number">8.</span> <span class="nav-text">项目思路</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#输入"><span class="nav-number">8.0.1.</span> <span class="nav-text">输入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输出"><span class="nav-number">8.0.2.</span> <span class="nav-text">输出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#处理过程分析"><span class="nav-number">8.0.3.</span> <span class="nav-text">处理过程分析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#程序如何和网页发出请求，返回数据？"><span class="nav-number">8.0.3.1.</span> <span class="nav-text">程序如何和网页发出请求，返回数据？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#选择什么模块-urllib-requests-bs4"><span class="nav-number">8.0.3.2.</span> <span class="nav-text">选择什么模块 urllib requests bs4</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据如何处理"><span class="nav-number">8.0.3.3.</span> <span class="nav-text">数据如何处理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#正则式表达是什么？"><span class="nav-number">8.0.3.4.</span> <span class="nav-text">正则式表达是什么？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何处理微博的反爬虫技术"><span class="nav-number">8.0.3.5.</span> <span class="nav-text">如何处理微博的反爬虫技术</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#项目记录"><span class="nav-number">9.</span> <span class="nav-text">项目记录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#建立仓库"><span class="nav-number">9.0.1.</span> <span class="nav-text">建立仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#处理微博的反爬虫技术"><span class="nav-number">9.0.2.</span> <span class="nav-text">处理微博的反爬虫技术</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Yina</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="2017年2月到5月，我参加了开智学堂「编程思维 Python 基础班」三期课程的课程学习教程。教是更好的学，所以整理出这份教程。 我在这门课上有很多不顺利的地方，自认为自己写得比较好的地方是作为小白在思维上的入门。主干课程内容完成情况不是很好，之后也没有再去重修，所以教程可以说有很多漏洞，请多包容和指正。 2018-11-23  CLI什么是CLI?还记得windows出来之前的dos操作系统吗">
+<meta property="og:type" content="article">
+<meta property="og:title" content="小白需要了解的CLI、Git和GitHub">
+<meta property="og:url" content="http://yoursite.com/2018/11/21/2018-11-23 纯小白的Python教程 V4.0-3/index.html">
+<meta property="og:site_name" content="Yina：Life Renting">
+<meta property="og:description" content="2017年2月到5月，我参加了开智学堂「编程思维 Python 基础班」三期课程的课程学习教程。教是更好的学，所以整理出这份教程。 我在这门课上有很多不顺利的地方，自认为自己写得比较好的地方是作为小白在思维上的入门。主干课程内容完成情况不是很好，之后也没有再去重修，所以教程可以说有很多漏洞，请多包容和指正。 2018-11-23  CLI什么是CLI?还记得windows出来之前的dos操作系统吗">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/2018/11/21/2018-11-23%20纯小白的Python教程%20V4.0-3/media/14871693658727/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-02-28%20%E4%B8%8B%E5%8D%889.46.29.png">
+<meta property="og:updated_time" content="2018-12-20T18:41:30.566Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="小白需要了解的CLI、Git和GitHub">
+<meta name="twitter:description" content="2017年2月到5月，我参加了开智学堂「编程思维 Python 基础班」三期课程的课程学习教程。教是更好的学，所以整理出这份教程。 我在这门课上有很多不顺利的地方，自认为自己写得比较好的地方是作为小白在思维上的入门。主干课程内容完成情况不是很好，之后也没有再去重修，所以教程可以说有很多漏洞，请多包容和指正。 2018-11-23  CLI什么是CLI?还记得windows出来之前的dos操作系统吗">
+<meta name="twitter:image" content="http://yoursite.com/2018/11/21/2018-11-23%20纯小白的Python教程%20V4.0-3/media/14871693658727/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-02-28%20%E4%B8%8B%E5%8D%889.46.29.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/11/21/2018-11-23 纯小白的Python教程 V4.0-3/"/>
+
+
+
+
+
+  <title>小白需要了解的CLI、Git和GitHub | Yina：Life Renting</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Yina：Life Renting</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/21/2018-11-23 纯小白的Python教程 V4.0-3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yina">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yina：Life Renting">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">小白需要了解的CLI、Git和GitHub</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-21T18:55:45+08:00">
+                2018-11-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/纯小白的Python教程/" itemprop="url" rel="index">
+                    <span itemprop="name">纯小白的Python教程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>2017年2月到5月，我参加了开智学堂「编程思维 Python 基础班」三期课程的课程学习教程。教是更好的学，所以整理出这份教程。</p>
+<p>我在这门课上有很多不顺利的地方，自认为自己写得比较好的地方是作为小白在思维上的入门。主干课程内容完成情况不是很好，之后也没有再去重修，所以教程可以说有很多漏洞，请多包容和指正。</p>
+<p>2018-11-23 </p>
+<h1 id="CLI"><a href="#CLI" class="headerlink" title="CLI"></a>CLI</h1><h3 id="什么是CLI"><a href="#什么是CLI" class="headerlink" title="什么是CLI?"></a>什么是CLI?</h3><p>还记得windows出来之前的dos操作系统吗？大概就是这个意思，直接用命令和计算机互动。</p>
+<p>和后来的桌面系统相比，这种直接以命令方式进行的互动方式，容错率低，门槛高，很难推广称为商业化的产品。</p>
+<p>然而小白要假装成极客的话，还是要会用的。至少运行python是一定需要通过这个界面的。</p>
+<h3 id="CLI常用命令"><a href="#CLI常用命令" class="headerlink" title="CLI常用命令"></a>CLI常用命令</h3><h4 id="cd-打开当前文件"><a href="#cd-打开当前文件" class="headerlink" title="cd 打开当前文件"></a><code>cd</code> 打开当前文件</h4><p>对于纯小白来说，这是必须要学会命令。因为运行程序必须先打开文件路径，在该文件下运行。<br>有些文件路径比较长，输入不方便。可以通过编辑，将XX拷贝为路径名称。如果编辑没有找到，可以在帮助里搜索，很容易跳出来。</p>
+<h4 id="文件路径如何添加"><a href="#文件路径如何添加" class="headerlink" title="文件路径如何添加"></a>文件路径如何添加</h4><p>1 拆成2步操作</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">jiangyinadeMacBook-Pro:~ Yina$ cd desktop</span><br><span class="line">jiangyinadeMacBook-Pro:desktop Yina$ cd Py103</span><br><span class="line">jiangyinadeMacBook-Pro:Py103 Yina$</span><br></pre></td></tr></table></figure>
+<p>2直接输入文件路径：上级文件名/文件名</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">jiangyinadeMacBook-Pro:~ Yina$ cd desktop/Py103</span><br><span class="line">jiangyinadeMacBook-Pro:Py103 Yina$</span><br></pre></td></tr></table></figure>
+<p>3 帮助——路径——复制路径，再粘贴<br><img src="media/14871693658727/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-02-28%20%E4%B8%8B%E5%8D%889.46.29.png" alt="屏幕快照 2017-02-28 下午9.46.29"></p>
+<h4 id="ls-列出当前文件夹中的文件"><a href="#ls-列出当前文件夹中的文件" class="headerlink" title="ls 列出当前文件夹中的文件"></a><code>ls</code> 列出当前文件夹中的文件</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">jiangyinadeMacBook-Pro:Py103 Yina$ ls</span><br><span class="line">Chap0			Chap5			ISSUE_TEMPLATE.md</span><br><span class="line">Chap1			Chap6			README.md</span><br><span class="line">Chap2			Chap7			SUMMARY.md</span><br><span class="line">Chap3			Chap8			note</span><br><span class="line">Chap4			Chap9</span><br></pre></td></tr></table></figure>
+<h4 id="pwd-显示当前文件的路径"><a href="#pwd-显示当前文件的路径" class="headerlink" title="pwd 显示当前文件的路径"></a><code>pwd</code> 显示当前文件的路径</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">jiangyinadeMacBook-Pro:Py103 Yina$ pwd</span><br><span class="line">/Users/Yina/desktop/Py103</span><br></pre></td></tr></table></figure>
+<h4 id="mkdir-新建文件"><a href="#mkdir-新建文件" class="headerlink" title="mkdir 新建文件"></a><code>mkdir</code> 新建文件</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">jiangyinadeMacBook-Pro:Py103 Yina$ mkdir test.txt</span><br><span class="line">jiangyinadeMacBook-Pro:Py103 Yina$ ls</span><br><span class="line">Chap0			Chap5			ISSUE_TEMPLATE.md</span><br><span class="line">Chap1			Chap6			README.md</span><br><span class="line">Chap2			Chap7			SUMMARY.md</span><br><span class="line">Chap3			Chap8			note</span><br><span class="line">Chap4			Chap9			test.txt</span><br></pre></td></tr></table></figure>
+<h1 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h1><h3 id="学python为什么要用github"><a href="#学python为什么要用github" class="headerlink" title="学python为什么要用github"></a>学python为什么要用github</h3><p>因为这是一个编程和写代码工作行业的bbs，程序猿和程序媛的社交网站啊。<br>没有错，但这并不是github的精髓。</p>
+<h3 id="需求场景"><a href="#需求场景" class="headerlink" title="需求场景"></a>需求场景</h3><p>我是一个零基础小白，我有一个python任务要完成，但是没有人可以指导我。任务比较忙，但是我的时间又比较紧，我放弃和“一定要独立完成，证明自己可以”的自尊心抵抗。</p>
+<p>然而，连看同学作业的过程都没有那么顺利。复制黏贴代码之后，发现运行不成功，于是我去微信群求助，然后发现，这次任务有好几个python文件，我没有全部复制黏贴下来，代码不完整，就无法运行。</p>
+<p>如果我要观摩好几个同学的作业，就得一个一个复制黏贴好麻烦，学习体验太差了有没有？</p>
+<p>于是我就想到了GitHub的folk和clone的功能，此时此刻显得非常有必要，然后就折腾出来了。</p>
+<p>通过这个过程中内心的纠结，切身体会到这个功能的需求场景了～</p>
+<h3 id="如何通过github提高姿势水平"><a href="#如何通过github提高姿势水平" class="headerlink" title="如何通过github提高姿势水平"></a>如何通过github提高姿势水平</h3><p><strong>预期目标：</strong></p>
+<ul>
+<li>一键folk, 轻松把别人的好代码弄到自己这里来</li>
+<li>一键clone到本地，在本地写代码，保持专注，有心流状态的创作</li>
+<li>一键commit提交代码, 实现本地和线上仓库的同步</li>
+</ul>
+<p><strong>步骤：</strong><br>1、注册github<br>2、去别人页面，看到中意的仓库，点击页面的folk按钮。<br>folk的功能，是一键把别人的仓库，弄到自己这里的功能。<br>价值是可以大大提高模仿jie ji的效借鉴参考牛人的效率。<br>3、在自己的页面中，就可以看到这个folk过来的仓库了。<br>4、下载github桌面端<br>github桌面端不在 appstore,要去官网下载。（小白可能会踩的坑，对的我就踩到过）<br>5、在github的仓库下，点击clone按钮，然后在github桌面端，就会把这个仓库下载本地了，需要建立一个文件夹<br>6、然后你可以在本地这个文件夹随便玩耍了，写代码，运行代码，如果要做处改动，就提交commit，然后在你自己页面的仓库里，这个仓库也就发生了变化</p>
+<p><strong>练习</strong><br>你可以做这样一个尝试：如何通过2个动作把廖雪峰的python课程在本地运行学习</p>
+<h3 id="看别人代码的正义性"><a href="#看别人代码的正义性" class="headerlink" title="看别人代码的正义性"></a>看别人代码的正义性</h3><p>@ 深圳-Mac-scrat-scratlzj</p>
+<blockquote>
+<p>我一直卡在ch4，又很抵触看别人的代码。</p>
+</blockquote>
+<p>@珠海-MAC-Zoom.ོQuiet</p>
+<blockquote>
+<p>‘’’…又很抵触看别人的代码’’<br>为什么?<br>教练来, 也是出示别人的代码的哪?<br>就和写作一样, 不破万书无以成自家风骨,<br>别人的代码不看, 那这世界上, 没有什么软件是写的出来的…<br>毕竟, IT 发展了快一个世纪了,<br>已经没有什么是能直接凭空写出来的代码了,<br>都在前人无数基础上嗯哼出来的,<br>也正是因为这一生态,才令编程界的发展比其它各界要高速的多的多的多!</p>
+</blockquote>
+<p>@安徽阜阳-OS X-武黎-fatfox2016</p>
+<blockquote>
+<p>我就是一路抄出来。<br>在这里要感谢@广州-Ubuntu-大猫-simpleowen @上海 - Win10 - Yifan - Yifan127。<br>我是全文抄一遍的，在用print大法拆完凿碎。</p>
+</blockquote>
+<h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h1><h3 id="为什么要了解git"><a href="#为什么要了解git" class="headerlink" title="为什么要了解git"></a>为什么要了解git</h3><p>我不是来学python的吗？为什么要学git?一开始我也不知道为什么。</p>
+<p>上网查了一些概念，知道git是一种版本管理的方法。什么？写程序还要专门学一个版本管理方法？</p>
+<p>github是基于这一版本管理方法，搭建的平台。哦，原来github不仅仅是码农界的bbs，程序猿和程序媛的社交网站。</p>
+<p>后来，在一次做任务中，深深体会到代码管理过程中的痛，软件代码管理的重要性，git解决的问题的价值，背后的思想。想到开学典礼上大妈说的那句：</p>
+<blockquote>
+<p>git 是一种世界观</p>
+</blockquote>
+<h3 id="git是什么"><a href="#git是什么" class="headerlink" title="git是什么"></a>git是什么</h3><p>分布式的代码管理系统。简而言之，之前的代码管理很麻烦，用git进行代码版本管理，炒鸡炒鸡厉害</p>
+<h3 id="git：抽象的时空观"><a href="#git：抽象的时空观" class="headerlink" title="git：抽象的时空观"></a>git：抽象的时空观</h3><p>工作区<br>仓库，或者叫做版本库<br>暂缓区<br>远程仓库</p>
+<h3 id="体验git"><a href="#体验git" class="headerlink" title="体验git"></a>体验git</h3><h4 id="在CLI操作git命令，本地进行仓库管理"><a href="#在CLI操作git命令，本地进行仓库管理" class="headerlink" title="在CLI操作git命令，本地进行仓库管理"></a>在CLI操作git命令，本地进行仓库管理</h4><p>注册</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">~ Yina$ git config --global user.name&quot;yina&quot; </span><br><span class="line">~ Yina$ git config --global user.email&quot;niceyina@gmail.com&quot;</span><br></pre></td></tr></table></figure>
+<p>在电脑本地建立git目录和仓库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~ Yina$ mkdir git-tutorialgit inti</span><br></pre></td></tr></table></figure></p>
+<h4 id="git-init-初始化仓库"><a href="#git-init-初始化仓库" class="headerlink" title="git init 初始化仓库"></a><code>git init</code> 初始化仓库</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">~ Yina$ cd git-tutorial git-tutorial  </span><br><span class="line">Yina$ git init  </span><br><span class="line">Initialized empty Git repository in /Users/Yina/git-tutorial/.git/ #目录存储当前目录内容所需的仓库数据</span><br><span class="line">:git-tutorial Yina$</span><br></pre></td></tr></table></figure>
+<h4 id="git-status-查看仓库状态"><a href="#git-status-查看仓库状态" class="headerlink" title="git status 查看仓库状态"></a>git status 查看仓库状态</h4><p>显示git仓库的状态，常用。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Yina$ git status </span><br><span class="line">On branch master# 我们正处在master分支下面 </span><br><span class="line">Initial commit</span><br><span class="line">nothing to commit (create/copy files and use &quot;git add&quot; to track)# 没有可以提交的内容</span><br></pre></td></tr></table></figure>
+<p>建立README.md文件，重新查看状态。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">jiangyinadeMacBook-Pro:git-tutorial Yina$ touch README.md</span><br><span class="line">jiangyinadeMacBook-Pro:git-tutorial Yina$ git status</span><br><span class="line">On branch master</span><br><span class="line">Your branch is up-to-date with &apos;origin/master&apos;.</span><br><span class="line">Untracked files:</span><br><span class="line">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)</span><br><span class="line"></span><br><span class="line">	README.md</span><br><span class="line"></span><br><span class="line">nothing added to commit but untracked files present (use &quot;git add&quot; to track)</span><br><span class="line">jiangyinadeMacBook-Pro:git-tutorial Yina$</span><br></pre></td></tr></table></figure>
+<h4 id="git-add-向暂存区添加文件"><a href="#git-add-向暂存区添加文件" class="headerlink" title="git add 向暂存区添加文件"></a><code>git add</code> 向暂存区添加文件</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ git add README.md</span><br><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">Your branch is up-to-date with &apos;origin/master&apos;.</span><br><span class="line">Changes to be committed:</span><br><span class="line">  (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)</span><br><span class="line"></span><br><span class="line">	new file:   README.md</span><br></pre></td></tr></table></figure>
+<h4 id="git-clone下载命令"><a href="#git-clone下载命令" class="headerlink" title="git clone下载命令"></a><code>git clone</code>下载命令</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">jiangyinadeMacBook-Pro:desktop Yina$ git clone https://github.com/miguelgrinberg/flasky.git</span><br><span class="line">Cloning into &apos;flasky&apos;...</span><br><span class="line">remote: Counting objects: 830, done.</span><br><span class="line">remote: Total 830 (delta 0), reused 0 (delta 0), pack-reused 830</span><br><span class="line">Receiving objects: 100% (830/830), 140.72 KiB | 126.00 KiB/s, done.</span><br><span class="line">Resolving deltas: 100% (462/462), done.</span><br></pre></td></tr></table></figure>
+<p>git clone</p>
+<figure class="highlight plain"><figcaption><span>Yina$ git clone</span><a href="https://github.com/yiiina/learn-python3.git" target="_blank" rel="noopener">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Cloning into &apos;learn-python3&apos;... </span><br><span class="line">remote: Counting objects: 286, done. </span><br><span class="line">remote: Total 286 (delta 0), reused 0 (delta 0), pack-reused 286 </span><br><span class="line">Receiving objects: 100% (286/286), 82.97 KiB | 6.00 KiB/s, done.</span><br><span class="line">Resolving deltas: 100% (83/83), done.</span><br></pre></td></tr></table></figure>
+<h4 id="git-remote-add-添加远程仓库"><a href="#git-remote-add-添加远程仓库" class="headerlink" title="git remote add 添加远程仓库"></a><code>git remote add</code> 添加远程仓库</h4><p>github创建仓库路径： <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a> yiiina/git-tutorial.git</p>
+<p><code>git remote add</code>把github上面的仓库设置成本地仓库的远程仓库。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add orgin git@github.com yiiina/git-tutorial.git</span><br></pre></td></tr></table></figure>
+<h4 id="git-push-推送至远程仓库"><a href="#git-push-推送至远程仓库" class="headerlink" title="git push 推送至远程仓库"></a><code>git push</code> 推送至远程仓库</h4><h4 id="git-checkout签出"><a href="#git-checkout签出" class="headerlink" title="git checkout签出"></a><code>git checkout</code>签出</h4><p>git checkout其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">jiangyinadeMacBook-Pro:flasky Yina$ git checkout 4a</span><br><span class="line">Note: checking out &apos;4a&apos;.</span><br><span class="line"></span><br><span class="line">You are in &apos;detached HEAD&apos; state. You can look around, make experimental</span><br><span class="line">changes and commit them, and you can discard any commits you make in this</span><br><span class="line">state without impacting any branches by performing another checkout.</span><br><span class="line"></span><br><span class="line">If you want to create a new branch to retain commits you create, you may</span><br><span class="line">do so (now or later) by using -b with the checkout command again. Example:</span><br><span class="line"></span><br><span class="line">  git checkout -b &lt;new-branch-name&gt;</span><br><span class="line"></span><br><span class="line">HEAD is now at 4bd4ac9... Chapter 4: Web forms with Flask-WTF (4a)</span><br></pre></td></tr></table></figure>
+<h4 id="比较区别git-diff"><a href="#比较区别git-diff" class="headerlink" title="比较区别git diff"></a>比较区别<code>git diff</code></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">jiangyinadeMacBook-Pro:flasky Yina$ git diff 2a 2b</span><br><span class="line">diff --git a/hello.py b/hello.py</span><br><span class="line">index 062cbc2..2bf2aed 100644</span><br><span class="line">--- a/hello.py</span><br><span class="line">+++ b/hello.py</span><br><span class="line">@@ -7,5 +7,10 @@ def index():</span><br><span class="line">     return &apos;&lt;h1&gt;Hello World!&lt;/h1&gt;&apos;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">+@app.route(&apos;/user/&lt;name&gt;&apos;)</span><br><span class="line">+def user(name):</span><br><span class="line">+    return &apos;&lt;h1&gt;Hello, %s!&lt;/h1&gt;&apos; % name</span><br><span class="line">+</span><br><span class="line">+</span><br><span class="line"> if __name__ == &apos;__main__&apos;:</span><br><span class="line">     app.run(debug=True)</span><br></pre></td></tr></table></figure>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><p>廖雪峰的git教程<br><a href="http://www.ruanyifeng.com/blog/2014/06/git_remote.html" target="_blank" rel="noopener">阮一峰Git远程操作详解
+</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/21/2018-11-23 纯小白的Python教程 V4.0-6/" rel="next" title="入门练习 Learn Python the Hard Way">
+                <i class="fa fa-chevron-left"></i> 入门练习 Learn Python the Hard Way
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/11/21/2018-11-23 纯小白的Python教程 V4.0-9/" rel="prev" title="学习心情手记|发现进错了教室之后">
+                学习心情手记|发现进错了教室之后 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Yina</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CLI"><span class="nav-number">1.</span> <span class="nav-text">CLI</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是CLI"><span class="nav-number">1.0.1.</span> <span class="nav-text">什么是CLI?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CLI常用命令"><span class="nav-number">1.0.2.</span> <span class="nav-text">CLI常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#cd-打开当前文件"><span class="nav-number">1.0.2.1.</span> <span class="nav-text">cd 打开当前文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文件路径如何添加"><span class="nav-number">1.0.2.2.</span> <span class="nav-text">文件路径如何添加</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ls-列出当前文件夹中的文件"><span class="nav-number">1.0.2.3.</span> <span class="nav-text">ls 列出当前文件夹中的文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#pwd-显示当前文件的路径"><span class="nav-number">1.0.2.4.</span> <span class="nav-text">pwd 显示当前文件的路径</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mkdir-新建文件"><span class="nav-number">1.0.2.5.</span> <span class="nav-text">mkdir 新建文件</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Github"><span class="nav-number">2.</span> <span class="nav-text">Github</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#学python为什么要用github"><span class="nav-number">2.0.1.</span> <span class="nav-text">学python为什么要用github</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#需求场景"><span class="nav-number">2.0.2.</span> <span class="nav-text">需求场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何通过github提高姿势水平"><span class="nav-number">2.0.3.</span> <span class="nav-text">如何通过github提高姿势水平</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#看别人代码的正义性"><span class="nav-number">2.0.4.</span> <span class="nav-text">看别人代码的正义性</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Git"><span class="nav-number">3.</span> <span class="nav-text">Git</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么要了解git"><span class="nav-number">3.0.1.</span> <span class="nav-text">为什么要了解git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git是什么"><span class="nav-number">3.0.2.</span> <span class="nav-text">git是什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git：抽象的时空观"><span class="nav-number">3.0.3.</span> <span class="nav-text">git：抽象的时空观</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#体验git"><span class="nav-number">3.0.4.</span> <span class="nav-text">体验git</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#在CLI操作git命令，本地进行仓库管理"><span class="nav-number">3.0.4.1.</span> <span class="nav-text">在CLI操作git命令，本地进行仓库管理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-init-初始化仓库"><span class="nav-number">3.0.4.2.</span> <span class="nav-text">git init 初始化仓库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-status-查看仓库状态"><span class="nav-number">3.0.4.3.</span> <span class="nav-text">git status 查看仓库状态</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-add-向暂存区添加文件"><span class="nav-number">3.0.4.4.</span> <span class="nav-text">git add 向暂存区添加文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-clone下载命令"><span class="nav-number">3.0.4.5.</span> <span class="nav-text">git clone下载命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-remote-add-添加远程仓库"><span class="nav-number">3.0.4.6.</span> <span class="nav-text">git remote add 添加远程仓库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-push-推送至远程仓库"><span class="nav-number">3.0.4.7.</span> <span class="nav-text">git push 推送至远程仓库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-checkout签出"><span class="nav-number">3.0.4.8.</span> <span class="nav-text">git checkout签出</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#比较区别git-diff"><span class="nav-number">3.0.4.9.</span> <span class="nav-text">比较区别git diff</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考资料"><span class="nav-number">3.0.5.</span> <span class="nav-text">参考资料</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Yina</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
