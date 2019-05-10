@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="这本书算是比较公认的入门教程。它强调动手，在练习中学习。它的理念差不多就是先下水，再学游泳动作的游泳教学法。不过他把动作切分得很小，新手在他的指引下不会被一口呛死。而且，还可以通过小小的努力获得的反馈中，获得正向的学习动力。 练习不多，总共是52个。把这些代码以及一些基础知识点过一遍。你可以把它当成这本教材的教辅。也可以先开始做这些练习。 通过简单的代码运行成功，获得正面的反馈。然后从输入的代码和">
+<meta property="og:type" content="article">
+<meta property="og:title" content="入门练习 Learn Python the Hard Way">
+<meta property="og:url" content="http://yoursite.com/2018/11/21/python 2018-11-23 V4.0-6/index.html">
+<meta property="og:site_name" content="Yina：Life Renting">
+<meta property="og:description" content="这本书算是比较公认的入门教程。它强调动手，在练习中学习。它的理念差不多就是先下水，再学游泳动作的游泳教学法。不过他把动作切分得很小，新手在他的指引下不会被一口呛死。而且，还可以通过小小的努力获得的反馈中，获得正向的学习动力。 练习不多，总共是52个。把这些代码以及一些基础知识点过一遍。你可以把它当成这本教材的教辅。也可以先开始做这些练习。 通过简单的代码运行成功，获得正面的反馈。然后从输入的代码和">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-01-19T07:43:40.023Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="入门练习 Learn Python the Hard Way">
+<meta name="twitter:description" content="这本书算是比较公认的入门教程。它强调动手，在练习中学习。它的理念差不多就是先下水，再学游泳动作的游泳教学法。不过他把动作切分得很小，新手在他的指引下不会被一口呛死。而且，还可以通过小小的努力获得的反馈中，获得正向的学习动力。 练习不多，总共是52个。把这些代码以及一些基础知识点过一遍。你可以把它当成这本教材的教辅。也可以先开始做这些练习。 通过简单的代码运行成功，获得正面的反馈。然后从输入的代码和">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/11/21/python 2018-11-23 V4.0-6/"/>
+
+
+
+
+
+  <title>入门练习 Learn Python the Hard Way | Yina：Life Renting</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Yina：Life Renting</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/21/python 2018-11-23 V4.0-6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yina">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yina：Life Renting">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">入门练习 Learn Python the Hard Way</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-21T18:55:45+08:00">
+                2018-11-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/纯小白的Python教程/" itemprop="url" rel="index">
+                    <span itemprop="name">纯小白的Python教程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>这本书算是比较公认的入门教程。它强调动手，在练习中学习。它的理念差不多就是先下水，再学游泳动作的游泳教学法。不过他把动作切分得很小，新手在他的指引下不会被一口呛死。而且，还可以通过小小的努力获得的反馈中，获得正向的学习动力。</p>
+<p>练习不多，总共是52个。把这些代码以及一些基础知识点过一遍。你可以把它当成这本教材的教辅。也可以先开始做这些练习。</p>
+<p>通过简单的代码运行成功，获得正面的反馈。然后从输入的代码和运行的结果中，感知python语言的规则。</p>
+<ol>
+<li>print</li>
+</ol>
+<ul>
+<li>功能：显示print后面的内容，使用频率很高</li>
+<li>python3中，print是函数，后面要加（）<br>“” 和’’的结果一样</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print &quot;hello world!&quot;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li><strong>#</strong></li>
+</ol>
+<ul>
+<li>对代码的注释</li>
+<li>运行的时候不会显示出来</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># a comment, this is so you can read your program later.</span><br><span class="line"># any thing after # is ignored by python.</span><br><span class="line">print &quot;I can have code like this.&quot;# and the comment after is ignored</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li><p>数字、运算、布尔值运算</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">print &quot;now i will count the eggs:&quot;</span><br><span class="line">print 3+2+1-5+4%2-1/4+6</span><br><span class="line">print &quot;it is true that 3+2&lt;5-7?&quot;</span><br><span class="line">print 3+2&lt;5-7</span><br><span class="line">print &quot;what is 3+2?&quot;,3+2</span><br><span class="line">print &quot;what is 5-7?&quot;,5-7</span><br><span class="line">print &quot;oh,that is why it&apos;s false.&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>变量和赋值</p>
+</li>
+</ol>
+<ul>
+<li>变量是对一组数据的名称</li>
+<li>变量可以对该组数据赋数值，也可以赋予文本</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">cars = 100</span><br><span class="line">car_driven = drivers</span><br><span class="line">变量也可以进行运算</span><br><span class="line">cars = 100</span><br><span class="line">space_in_a_car = 4.0</span><br><span class="line">drivers = 30</span><br><span class="line">passengers = 90</span><br><span class="line">cars_not_driven = cars - drivers</span><br><span class="line">cars_driven = drivers</span><br><span class="line">carpool_capacity = cars_driven * space_in_a_car</span><br><span class="line">average_passengers_per_car = passengers/cars_driven </span><br><span class="line"></span><br><span class="line">print &quot;there are&quot;, cars,&quot;cars available.&quot;</span><br><span class="line">print &quot;there are only&quot;, drivers, &quot;drivers available.&quot;</span><br><span class="line">print &quot;there will be&quot;,cars_not_driven,&quot;empty cars today.&quot;</span><br><span class="line">print &quot;we can transport&quot;, carpool_capacity,&quot;people today.&quot;</span><br><span class="line">print &quot;we have&quot;,passengers,&quot;to carpool today.&quot;</span><br><span class="line">print &quot;we need to put about&quot;, average_passengers_per_car,&quot;in each car&quot;</span><br></pre></td></tr></table></figure>
+<p>5 - 8 % 格式化字符串<br>：理解为一种偷懒的方式，让主句简短，相应的内容凡在后面<br>字符串可以套入变量<br>%s 跟字符串<br>%d 跟数据<br>%r  repr 综合的返回</p>
+<p>5<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">my_name = &apos;zed a. shaw&apos;</span><br><span class="line">my_age = 35 #not a lie</span><br><span class="line">my_height = 74 # inches</span><br><span class="line">my_weight = 180 # lbs</span><br><span class="line">my_eyes = &apos;blue&apos;</span><br><span class="line">my_teeth = &apos;white&apos;</span><br><span class="line">my_hair = &apos;brown&apos;</span><br><span class="line"></span><br><span class="line">print &quot;let&apos;s talk about %s&quot; % my_name</span><br><span class="line">print &quot;he&apos;s %d inches tall.&quot; % my_height</span><br><span class="line">print &quot;he&apos;s %d pounds heavy.&quot; % my_weight</span><br><span class="line">print &quot;actually that&apos;s not too heavy.&quot;</span><br><span class="line">print &quot;he&apos;s got %s eyes and %s hair.&quot; % (my_eyes, my_hair)</span><br><span class="line">print &quot;his teeth are usually %s depending on the coffee.&quot; % my_teeth</span><br><span class="line">#this line is tricky,try to get is exactly right</span><br><span class="line">print &quot;if i add %d, %d, and %d i get %d.&quot; % (my_age, my_height, my_weight, my_age + my_height + my_weight)</span><br></pre></td></tr></table></figure></p>
+<p>6</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">x = &quot;there are %d types of people.&quot; % 10</span><br><span class="line">binary = &quot;binary&quot;</span><br><span class="line">do_not = &quot;don&apos;t&quot;</span><br><span class="line">y = &quot;those who know %s and those who %s.&quot; % (binary, do_not)</span><br><span class="line"></span><br><span class="line">print x</span><br><span class="line">print y</span><br><span class="line"></span><br><span class="line">print &quot;i said %r.&quot; % x</span><br><span class="line">print &quot;i also said &apos;%s&apos;.&quot; % y</span><br><span class="line"></span><br><span class="line">hilarious = False</span><br><span class="line">joke_evaluation = &quot;isn&apos;t that joke so funny?! %r&quot;</span><br><span class="line"></span><br><span class="line">print joke_evaluation % hilarious</span><br><span class="line"></span><br><span class="line">w = &quot;this is the left side of ...&quot;</span><br><span class="line">e = &quot;a string with a right side.&quot;</span><br><span class="line"></span><br><span class="line">print w + e</span><br></pre></td></tr></table></figure>
+<p>7</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">print &quot;mary had a little lamb.&quot;</span><br><span class="line">print &quot;its fleece was white as %s.&quot; % &apos;snow&apos;</span><br><span class="line">print &quot;and everywhere that mary went.&quot;</span><br><span class="line">print &quot;.&quot;* 10# what&apos;d that do?</span><br><span class="line"></span><br><span class="line">end1 = &quot;C&quot;</span><br><span class="line">end2 = &quot;h&quot;</span><br><span class="line">end3 = &quot;e&quot;</span><br><span class="line">end4 = &quot;e&quot;</span><br><span class="line">end5 = &quot;s&quot;</span><br><span class="line">end6 = &quot;e&quot;</span><br><span class="line">end7 = &quot;B&quot;</span><br><span class="line">end8 = &quot;u&quot;</span><br><span class="line">end9 = &quot;r&quot;</span><br><span class="line">end10 = &quot;g&quot;</span><br><span class="line">end11 = &quot;e&quot;</span><br><span class="line">end12 = &quot;r&quot;</span><br><span class="line"></span><br><span class="line"># watch that comma at the end.try removing it to see what happens</span><br><span class="line"></span><br><span class="line">print end1 + end2 + end3 + end4 + end5 +end6,</span><br><span class="line">print end7 + end8 + end9 + end10 + end11 + end12</span><br></pre></td></tr></table></figure>
+<p>有逗号：<br>Cheese Burger<br>逗号去掉：<br>Cheese<br>Burger</p>
+<p>8</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">formatter = &quot;%r %r %r %r&quot;</span><br><span class="line"></span><br><span class="line">print formatter % (1,2,3,4)</span><br><span class="line">print formatter % (&quot;one&quot;,&quot;two&quot;,&quot;three&quot;,&quot;four&quot;)</span><br><span class="line">print formatter % (True, False, False, True)</span><br><span class="line">print formatter % (formatter,formatter,formatter,formatter)</span><br><span class="line">print formatter % (</span><br><span class="line">&quot;i had this thing.&quot;,</span><br><span class="line">&quot;that you could type right.&quot;,</span><br><span class="line">&quot;but it didn&apos;t sing.&quot;,</span><br><span class="line">&quot;so I said goodnight.&quot;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>9-10 转义符，换行</p>
+<ul>
+<li>\n   换行</li>
+<li>“””  换行开始和换行结束,可以同时多行换行</li>
+<li>\   转义符<ul>
+<li>\t  缩进</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># here&apos;s some new stranger stuff, remember type it exactly.</span><br><span class="line"></span><br><span class="line">days = &quot;mon tue wed thu sat sun&quot;</span><br><span class="line">months = &quot;jan\nfeb\nmar\napr\nmay\njun\njul\naug&quot;</span><br><span class="line"></span><br><span class="line">print &quot;here are the days: &quot;, days</span><br><span class="line">print &quot;here are the months: &quot;, months</span><br><span class="line"></span><br><span class="line">print &quot;&quot;&quot;</span><br><span class="line">there&apos;s something going on here</span><br><span class="line">with the three double-quotes.</span><br><span class="line">we&apos;ll be able to type as much as we like.</span><br><span class="line">even 4 lines if we want, or 5, or 6.</span><br><span class="line">&quot;&quot;&quot;</span><br></pre></td></tr></table></figure>
+<p>11-12 输入和输出<br>age=raw_input（）<br>age是一个变量<br>raw_input（） 对应的具体的数值外部输入<br>raw_input的两种句式<br>1<br>print “how old are you?”<br>age = raw_input()<br>2<br>age = raw_input(“how old are you?”)<br>print “how old are you?”</p>
+<p>11</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">age = raw_input()</span><br><span class="line">print &quot;how tall are you?&quot;</span><br><span class="line">height = raw_input()</span><br><span class="line">print &quot;how much do you weight?&quot;,</span><br><span class="line">weight =  raw_input()</span><br><span class="line"></span><br><span class="line">print &quot;so,you are %r old, %r tall and %r heavy.&quot; % (age, height, weight)</span><br></pre></td></tr></table></figure>
+<p>12</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">age =  raw_input(&quot;how old are you?&quot;)</span><br><span class="line">height = raw_input(&quot;how tall are you?&quot;)</span><br><span class="line">weight = raw_input(&quot;how much do you weight?&quot;)</span><br><span class="line"></span><br><span class="line">print &quot;so,you&apos;re %r old, %r tall and %r heavy.&quot; % (age,height,weight)</span><br></pre></td></tr></table></figure>
+<ol start="13">
+<li>导入模块，import语句</li>
+</ol>
+<ul>
+<li>模块<br>sys是一个模组（modules, librairies）是python的标准库<br>把sys模组中的参数变量导入进来<br>sys 和module,dicteries 这些概念类似，模组，模块…<br>argv 参数变量 你传递给python的参数<br>解包：将所有参数放到一个变量下面，每个参数赋予一个变量名，含义，把argv中的东西解包，并将所有参数依次赋予左边的变量名</li>
+<li>import语句<br>调用python的标准库功能<br>导入文件，可以避免脚本过于冗长<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">from sys import argv</span><br><span class="line"></span><br><span class="line">script,first,second,third = argv</span><br><span class="line"></span><br><span class="line">print &quot;the script is called:&quot;,script</span><br><span class="line">print &quot;your first variable is:&quot;,first</span><br><span class="line">print &quot;your second variable is:&quot;,second</span><br><span class="line">print &quot;your third variable is:&quot;,third</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="14">
+<li>prompt &gt; 提示符<br>使用传递符号，&gt; 提醒用户这里有输入信息</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">from sys import argv</span><br><span class="line"></span><br><span class="line">script, user_name = argv</span><br><span class="line">prompt = &apos;&gt; &apos;</span><br><span class="line"></span><br><span class="line">print &quot;hi %s, I&apos;m the %s script.&quot; % (user_name, script)</span><br><span class="line">print &quot;i&apos;d like to ask you a few questions.&quot;</span><br><span class="line">print &quot;do you like me %s?&quot; % user_name</span><br><span class="line">likes = raw_input(prompt)</span><br><span class="line"></span><br><span class="line">print &quot;where do you live %s?&quot; % user_name</span><br><span class="line">lives = raw_input (prompt)</span><br><span class="line"></span><br><span class="line">print &quot;what kind of computer do you have?&quot;</span><br><span class="line">computer = raw_input(prompt)</span><br><span class="line"></span><br><span class="line">print &quot;&quot;&quot;</span><br><span class="line">alright, so you said %r about liking me.</span><br><span class="line">you live in %r. not sure where that is.</span><br><span class="line">and you have a %r computer. nice.</span><br><span class="line">&quot;&quot;&quot; % (likes,lives,computer)</span><br></pre></td></tr></table></figure>
+<p>15-17 文档 </p>
+<p>15 打开文档，显示文档内容<br>使用argv参数变量，获取文件名称这个参数<br>定义一个变量名称，来和这个文档联结。<br>打开读取文件 txt=open()<br>呈现当前文件 txt.read()</p>
+<p>script, filename = argv 倒过来写会如何？<br>报错信息：<br>Traceback (most recent call last):<br>  File “ex15.py”, line 4, in <module><br>    argv = script, filename<br>NameError: name ‘script’ is not defined<br>倒过来放，就是要重新定义变量了，但是argv是默认的参数变量。<br>这里是传递参数的过程。</module></p>
+<p>txt和 txt_again指向的是同一个txt文件，这个文件有了2个变量名称。<br>txt_again是用户输入的变量名称，有可能会和txt指代的是不一样。如果这个文档内容没有导入，会出现什么？<br>lpthw Yina$ python ex15.py ex15_sample.txt<br>…<br>type the filename again:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ex15sample.txt</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line"> File &quot;ex15.py&quot;, line 14, in &lt;module&gt;</span><br><span class="line">    txt_again = open(file_again)</span><br><span class="line">IOError: [Errno 2] No such file or directory: &apos;ex15sample.txt&apos;</span><br><span class="line">jiangyinadeMacBook-Pro:lpthw Yina$</span><br></pre></td></tr></table></figure></p>
+<p>如果把txt_again这个变量也改成txt会如何？<br>试了一下，结果不会变化。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">from sys import argv</span><br><span class="line">script, filename = argv</span><br><span class="line">txt = open(filename)</span><br><span class="line">print &quot;here&apos;s your file %r:&quot; % filename</span><br><span class="line">print txt.read()</span><br><span class="line"></span><br><span class="line">print &quot;type the filename again:&quot;</span><br><span class="line">file_again = raw_input(&quot;&gt; &quot;)</span><br><span class="line"></span><br><span class="line">txt_again = open(file_again)</span><br><span class="line"></span><br><span class="line">print txt_again.read()</span><br><span class="line"> sample.txt</span><br><span class="line">this is stuff i typed into a file.</span><br><span class="line">it is really cool stuff.</span><br><span class="line">lots and lots of fun to have in here.</span><br></pre></td></tr></table></figure>
+<p>16 删除文件内容和写入文件内容<br>truncate（） 清空文件，小心使用<br>write（stuff）将stuff写入文件<br>close（） 关闭文件，和保存一个意思<br>from sys import argv</p>
+<p>script,filename = argv</p>
+<p>print “we’re going to erase %r.” % filename<br>print “if you don’t want that,hit CTRL-C(^C).”<br>print “if you do want that,hit RETURN.”</p>
+<p>raw_input(“?”)</p>
+<p>print “opening the file…”<br>target = open(filename,’w’)</p>
+<p>print “truncating the file. goodbye!”<br>target.truncate()</p>
+<p>print “now i’m going to ask you for three lines.”</p>
+<p>line1 = raw_input(“line 1: “)<br>line2 = raw_input(“line 2: “)<br>line3 = raw_input(“line 3: “)</p>
+<p>print “i’m going to write these to the file.”</p>
+<p>target.write(line1)<br>target.write(“\n”)<br>target.write(line2)<br>target.write(“\n”)<br>target.write(line3)<br>target.write(“\n”)</p>
+<p>print “and finally,we close it.”<br>target.close()</p>
+<p>17 复制文件<br>len<br>exist 命令 将文件名字符串作为参数，如果文件存在，返回true，否则返回false<br>cat 命令<br>?<br>e3 100-25*3%4<br>97<br>3+2+1-5+4%2-1/4+6<br>7<br>e7,cheese burger, print 换行实现的是空格，而不是换行，为什么？<br>%r和%s的区别</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">from sys import argv</span><br><span class="line">from os.path import exists</span><br><span class="line"></span><br><span class="line">script,from_file,to_file = argv</span><br><span class="line"></span><br><span class="line">print&quot;coping from %s to %s&quot; % (from_file, to_file)</span><br><span class="line"></span><br><span class="line">we could do these two on one line too, how?</span><br><span class="line">in_file = open(from_file)</span><br><span class="line">indata = in_file.read()</span><br><span class="line"></span><br><span class="line">print &quot;the input file is %d bytes long&quot; % len(indata)</span><br><span class="line"></span><br><span class="line">print &quot;does the output file exist? %r&quot; % exists(to_file)</span><br><span class="line">print &quot;ready,hit RETURN to contune, CTRL-C to abort.&quot;</span><br><span class="line">raw_input()</span><br><span class="line"></span><br><span class="line">out_file = open(to_file,&apos;w&apos;)</span><br><span class="line">out_file.write(indata)</span><br><span class="line"></span><br><span class="line">print &quot;alright,all done.&quot;</span><br><span class="line"></span><br><span class="line">out_file.close()</span><br><span class="line">in_file.close()</span><br></pre></td></tr></table></figure>
+<p>嵌套关系：变量套字符和数字，字符串可以套变量，函数可以套变量</p>
+<p>18-21 函数<br>18 函数<br>微型脚本，小命令，使用def新建函数<br>def 变量名称（参数）<br>函数体</p>
+<p>19<br>函数和变量的关系<br>函数的变量和脚本的变量没有连接<br>参数可以是数字，变量，也可以是运算<br>函数很灵活<br>加分作业表示：编一个函数，然后用10种方法运行～</p>
+<p>20 函数和文件如何写作</p>
+<p>21 return 函数值</p>
+<p>22 -26 复习 </p>
+<p>25<br>导入到编译器使用<br>函数可以一步一步做的简单，也可以通过嵌套一步到位<br>“”” “”” 文档注释</p>
+<p>27-28 布尔运算，逻辑关系</p>
+<p>29-31 条件控制语句<br>x += 1  就是x = x + 1<br>条件控制语句: if 语句<br>if语句包含if语句的嵌套<br>if语句背后是布尔运算的逻辑关系</p>
+<p>32 流程控制语句：for循环语句和列表</p>
+<p>33 while 循环</p>
+<p>34 处理列表</p>
+<p>38 还是和列表相关的</p>
+<p>35 函数分支<br>36 修复bug<br>37 复习<br>39 字典<br>40-44 类 对象</p>
+<p>模块：嵌套变量和函数<br>另一个文件导入之后，可以使用模块中的函数和变量<br>使用模块和使用字典有类似地方，不过语法不一样</p>
+<p>python中的通用模式<br>建立key=value的容器<br>通过key调取value</p>
+<p>字典：[key]-value<br>模块：.key-函数，返回值</p>
+<p>类和模块比较相似，有一组函数和数据，通过 . 来调用</p>
+<p>例子：mystuff 分别为字典，模块，和类</p>
+<p>提取东西的3种方式：dict, module,class</p>
+<p>41<br>导入网页中的数据：<br>WOERDS 建立空列表，通过append()把数据写入列表<br>append（）的参数是word.strip()<br>通过for语句一行一行读取网页中的数据，通过strip()去掉每一行数据中的空格。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import random</span><br><span class="line">&gt;&gt;&gt; from urllib import urlopen</span><br><span class="line">&gt;&gt;&gt; import sys</span><br><span class="line">&gt;&gt;&gt; WORD_URL = &quot;http://learncodethehardway.org/words.txt&quot;</span><br><span class="line">&gt;&gt;&gt; WORDS = []</span><br><span class="line">&gt;&gt;&gt; for word in urlopen(WORD_URL).readlines():</span><br><span class="line">...     WORDS.append(word.strip()) </span><br><span class="line">&gt;&gt;&gt; WORDS</span><br><span class="line">[&apos;account&apos;, &apos;achiever&apos;, ……, &apos;dust&apos;]</span><br></pre></td></tr></table></figure>
+<p>这里PHRASES是一个字典数据,有6组key-value值。每一个value是对这个key进行注释的字符串。翻译一下每一个key-value。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">1、class %%%(%%%):：创建一个名字叫%%%，并且属于%%%的类</span><br><span class="line"></span><br><span class="line">2、&quot;class %%%(object):\n\tdef __init__(self, ***)&quot;：为%%%这个类初始化定义，并且包含self和***的参数。</span><br><span class="line"></span><br><span class="line">3、class %%%(object):\n\tdef ***(self, @@@)&quot;：%%%这个类有一个一个叫***的函数，函数的参数包括self 和@@@</span><br><span class="line"></span><br><span class="line">4、*** = %%%()：创建%%%的实例，***</span><br><span class="line"></span><br><span class="line">5、让实例***使用***这个函数，并且传递参数self和@@@</span><br><span class="line"></span><br><span class="line">6、***.*** = &apos;***&apos;:从***获得***的属性并且设置为***</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/21/python 2018-11-23 V4.0-2/" rel="next" title="小白学Python必备求生姿势">
+                <i class="fa fa-chevron-left"></i> 小白学Python必备求生姿势
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/12/19/2016-11-30 热点的价值/" rel="prev" title="网络热点的价值">
+                网络热点的价值 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Yina</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Yina</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
