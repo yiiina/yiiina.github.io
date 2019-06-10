@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="背景目标很早看到阳老师安利Zotero，在信息分析4期第一次体验Zotero，感受到它是个人知识管理系统的神器。 我计划把自己的电子书和电子文档都通过Zotero来管理，但是Zotero很快提醒我300MB空间很快就满了，大大限制了它作为个人知识管理神器可以发挥的效能。本期复训的重点实践策略就是突破空间的限制，在学习，工作和生活各种知识管理中，充分发挥它的价值。 官方提供的资料目前有两种方法解决这">
+<meta property="og:type" content="article">
+<meta property="og:title" content="3种Zotero扩容方案，提升知识管理效能">
+<meta property="og:url" content="http://yoursite.com/2019/06/11/tool  2019-06-11 zotero sync/index.html">
+<meta property="og:site_name" content="Yina：Life Renting">
+<meta property="og:description" content="背景目标很早看到阳老师安利Zotero，在信息分析4期第一次体验Zotero，感受到它是个人知识管理系统的神器。 我计划把自己的电子书和电子文档都通过Zotero来管理，但是Zotero很快提醒我300MB空间很快就满了，大大限制了它作为个人知识管理神器可以发挥的效能。本期复训的重点实践策略就是突破空间的限制，在学习，工作和生活各种知识管理中，充分发挥它的价值。 官方提供的资料目前有两种方法解决这">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-06-10T16:45:02.049Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="3种Zotero扩容方案，提升知识管理效能">
+<meta name="twitter:description" content="背景目标很早看到阳老师安利Zotero，在信息分析4期第一次体验Zotero，感受到它是个人知识管理系统的神器。 我计划把自己的电子书和电子文档都通过Zotero来管理，但是Zotero很快提醒我300MB空间很快就满了，大大限制了它作为个人知识管理神器可以发挥的效能。本期复训的重点实践策略就是突破空间的限制，在学习，工作和生活各种知识管理中，充分发挥它的价值。 官方提供的资料目前有两种方法解决这">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/06/11/tool  2019-06-11 zotero sync/"/>
+
+
+
+
+
+  <title>3种Zotero扩容方案，提升知识管理效能 | Yina：Life Renting</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Yina：Life Renting</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/11/tool  2019-06-11 zotero sync/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yina">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yina：Life Renting">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">3种Zotero扩容方案，提升知识管理效能</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-11T00:43:26+08:00">
+                2019-06-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/效能工具箱/" itemprop="url" rel="index">
+                    <span itemprop="name">效能工具箱</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><h3 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h3><p>很早看到阳老师安利Zotero，在信息分析4期第一次体验Zotero，感受到它是个人知识管理系统的神器。</p>
+<p>我计划把自己的电子书和电子文档都通过Zotero来管理，但是Zotero很快提醒我300MB空间很快就满了，大大限制了它作为个人知识管理神器可以发挥的效能。本期复训的重点实践策略就是突破空间的限制，在学习，工作和生活各种知识管理中，充分发挥它的价值。</p>
+<h3 id="官方提供的资料"><a href="#官方提供的资料" class="headerlink" title="官方提供的资料"></a>官方提供的资料</h3><p>目前有两种方法解决这个问题，分别是：</p>
+<ol>
+<li>购买Zotero官方同步服务</li>
+<li><p>使用WebDav同步服务，支持WebDav的云服务有：</p>
+<ul>
+<li>Win:坚果云、OneDrive</li>
+<li>Mac:iCoudDrive  </li>
+</ul>
+</li>
+</ol>
+<p>攻略：<br><a href="https://zhuanlan.zhihu.com/p/31453719" target="_blank" rel="noopener">Zotero 跨平台同步附件的实现</a><br><a href="https://zhuanlan.zhihu.com/p/28325366" target="_blank" rel="noopener">Zotero 5.0使用教程/坚果云同步盘和Zotero的配置过程详解</a></p>
+<h3 id="尝试"><a href="#尝试" class="headerlink" title="尝试"></a>尝试</h3><p>我觉得坚果云的攻略比较清晰，第一次尝试使用坚果云。通过坚果云提供的官方教程，过程很顺利。</p>
+<p><a href="http://help.jianguoyun.com/?p=3168" target="_blank" rel="noopener">如何在Zotero中设置webdav连接到坚果云？</a></p>
+<h3 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h3><p>但是结果很不理想：文件名都是乱码。</p>
+<p>我搞不懂原因是什么，所以花了一点时间去研究。</p>
+<p>Zotero的优势建立在它的底层逻辑，相应的缺点就是，没有那么直观易懂。研究的过程，发现了很多我之前不懂的地方。小白看技术类的分享帖，总会因为一个一个盲点，看得一头雾水。所以我写一篇小白友好的Zotero扩容方案攻略，也是梳理清楚自己的思路。</p>
+<h2 id="结论：3种需求场景下的方案"><a href="#结论：3种需求场景下的方案" class="headerlink" title="结论：3种需求场景下的方案"></a>结论：3种需求场景下的方案</h2><p>之前我只是想着300MB不够用，但是并没有对自己的需求有明确的定义。跟着别人的攻略，容易出Bug卡住，也不明白为什么要这么操作。不同的需求，有不同的方案可以满足，对于我最一开始的需求，其实方案是非常简单的。因为不懂，所以折腾了不少时间。</p>
+<table>
+<thead>
+<tr>
+<th>需求场景</th>
+<th>方案简述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>只是希望zotero的使用不受空间的限制</td>
+<td>Zotero首选项设置 → 同步 → 取消勾选文件同步</td>
+</tr>
+<tr>
+<td>要对附件文件进行备份</td>
+<td>WebDav：坚果云</td>
+</tr>
+<tr>
+<td>需要清晰看到文件名，便于文件管理</td>
+<td>zotfile + 同步云盘</td>
+</tr>
+</tbody>
+</table>
+<h2 id="需求场景1：zotero的使用不受空间的限制"><a href="#需求场景1：zotero的使用不受空间的限制" class="headerlink" title="需求场景1：zotero的使用不受空间的限制"></a>需求场景1：zotero的使用不受空间的限制</h2><h3 id="分析：Zotero的同步类型"><a href="#分析：Zotero的同步类型" class="headerlink" title="分析：Zotero的同步类型"></a>分析：Zotero的同步类型</h3><p>Zotero 同步分为2种，数据同步和文件同步。</p>
+<ol>
+<li>数据同步</li>
+</ol>
+<p>数据类型包含除了附件之外的内容，包含条目, 笔记, 链接, 标签等。<strong>同步空间是没有限制，所以不用担心这部分的空间。</strong></p>
+<ol start="2">
+<li>文件同步</li>
+</ol>
+<p>附件文件，包括PDF文档、音频、视频、图片等。<br>让我们免费空间很快撑满，使用受限制的，主要是这里的附件文件。</p>
+<h3 id="操作：取消文件同步"><a href="#操作：取消文件同步" class="headerlink" title="操作：取消文件同步"></a>操作：取消文件同步</h3><p>只是希望zotero的使用没有限制，没有同步到网盘的需求，非常简单，只需要1个步骤：<br>打开Zotero的首选项设置 → 同步 → 取消勾选文件同步</p>
+<h3 id="结果：本地文件夹Storage"><a href="#结果：本地文件夹Storage" class="headerlink" title="结果：本地文件夹Storage"></a>结果：本地文件夹Storage</h3><p>如何找这些文档？他们在本地文件夹zotero → storage里。</p>
+<h2 id="需求场景2：要对附件文件进行备份"><a href="#需求场景2：要对附件文件进行备份" class="headerlink" title="需求场景2：要对附件文件进行备份"></a>需求场景2：要对附件文件进行备份</h2><p>如果想备份这些附件文件呢？</p>
+<h3 id="分析：附件文件同步方案"><a href="#分析：附件文件同步方案" class="headerlink" title="分析：附件文件同步方案"></a>分析：附件文件同步方案</h3><p>Zotero官方提供的方案，以及课程的提供资料是：</p>
+<ol>
+<li>购买Zotero官方同步服务</li>
+<li><p>使用WebDav同步服务<br>WebDav是一种网络协议，支持WebDav的云服务有：</p>
+<ul>
+<li>Win:坚果云、OneDrive</li>
+<li>Mac:iCoudDrive  </li>
+</ul>
+</li>
+</ol>
+<h3 id="操作：WebDav坚果云"><a href="#操作：WebDav坚果云" class="headerlink" title="操作：WebDav坚果云"></a>操作：WebDav坚果云</h3><p>这个方案是我背景里提到的方案。第一次尝试云同步就是用的这个方案。步骤如下：</p>
+<p><a href="http://help.jianguoyun.com/?p=3168" target="_blank" rel="noopener">如何在Zotero中设置webdav连接到坚果云？</a></p>
+<h3 id="结果：坚果云成功同步Storage-但是文件名是乱码"><a href="#结果：坚果云成功同步Storage-但是文件名是乱码" class="headerlink" title="结果：坚果云成功同步Storage, 但是文件名是乱码"></a>结果：坚果云成功同步Storage, 但是文件名是乱码</h3><p>坚果云同步Storage, 但是文件名是乱码。通过研究Zotero的本地文件夹，也清楚了。他同步的其实就是本地zotero文件夹中的storage，文件名称是一样的。</p>
+<h2 id="需求场景3：附件文件管理-附件文件备份"><a href="#需求场景3：附件文件管理-附件文件备份" class="headerlink" title="需求场景3：附件文件管理 + 附件文件备份"></a>需求场景3：附件文件管理 + 附件文件备份</h2><p>如果无法接受这种文件名，那需要引入文件管理工具zotfile。</p>
+<h3 id="分析：zotfile：Zotero的高级PDF管理"><a href="#分析：zotfile：Zotero的高级PDF管理" class="headerlink" title="分析：zotfile：Zotero的高级PDF管理"></a>分析：zotfile：Zotero的高级PDF管理</h3><p>Zotfile是一个Zotero的一个插件，用于管理附件，功能：</p>
+<ul>
+<li>将新文件附加到Zotero的条目</li>
+<li>基于元数据，批量重命名和移动附件</li>
+<li>同步到iPad或者安卓平板电脑</li>
+<li>自动从PDF文件中提取注释</li>
+</ul>
+<h3 id="操作：设置Zotero、zotfile、同步网盘"><a href="#操作：设置Zotero、zotfile、同步网盘" class="headerlink" title="操作：设置Zotero、zotfile、同步网盘"></a>操作：设置Zotero、zotfile、同步网盘</h3><ol>
+<li>zotfile监听本地附件文件Storage中的附件，并自动重命名管理</li>
+<li>Zotfile可以把监听到的附件，同步到zotero,或者同步到一个自定义文件，附件生成链接，zotero读取该链接。Zotero的链接附件的根目录，设置为这个自定义的文档。</li>
+<li>用网盘同步链接附件的根目录<br>我这里用的是坚果云的客户端。</li>
+</ol>
+<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><ol>
+<li>这篇贴子是来自于复训之前离的flag.对我最一开始的需求来说，其实方案1就够了。我看了很多贴，对Zotero更了解之后，才发现这一点。</li>
+<li>写的过程中，看到群里有讨论说：zotfile，需要卸载/停用，因为它会不停地向谷歌发出请求，来自动更新文件的元数据，所以你虽然没有手动登录谷歌学术，但实际上你的 IP 早就被谷歌的反爬虫机制盯上了。</li>
+<li>写这个贴花了一周的时间。虽然增加了对Zotero的理解，但不算顺利。但是对我当前的需求，已经足够了。</li>
+<li>坚果云的同步方案，给我之前电脑的重要文档找到更好的解决方案。我之前是定期手动存硬盘和上传到百度云盘。坚果云这种自动同步本地的文件夹，更省心。</li>
+</ol>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://www.zotero.org/support/sync" target="_blank" rel="noopener">zotero官方文档：同步</a><br><a href="http://zotfile.com/" target="_blank" rel="noopener">zotfile官方文档</a><br><a href="https://www.douban.com/note/705238892/?from=author" target="_blank" rel="noopener">Zotero 同步指南</a><br><a href="https://zhuanlan.zhihu.com/p/31453719" target="_blank" rel="noopener">Zotero 跨平台同步附件的实现</a><br><a href="http://help.jianguoyun.com/?p=3168" target="_blank" rel="noopener">如何在Zotero中设置webdav连接到坚果云？</a><br><a href="https://zhuanlan.zhihu.com/p/28325366" target="_blank" rel="noopener">Zotero 5.0使用教程/坚果云同步盘和Zotero的配置过程详解</a></p>
+<h2 id="ChangeLog"><a href="#ChangeLog" class="headerlink" title="ChangeLog"></a>ChangeLog</h2><p>2019-06-07 初稿</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/06/11/write 2019-06-11 speech writing/" rel="next" title="语音写作一周总结">
+                <i class="fa fa-chevron-left"></i> 语音写作一周总结
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Yina</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#目标"><span class="nav-number">1.1.</span> <span class="nav-text">目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#官方提供的资料"><span class="nav-number">1.2.</span> <span class="nav-text">官方提供的资料</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#尝试"><span class="nav-number">1.3.</span> <span class="nav-text">尝试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#遇到的问题"><span class="nav-number">1.4.</span> <span class="nav-text">遇到的问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结论：3种需求场景下的方案"><span class="nav-number">2.</span> <span class="nav-text">结论：3种需求场景下的方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#需求场景1：zotero的使用不受空间的限制"><span class="nav-number">3.</span> <span class="nav-text">需求场景1：zotero的使用不受空间的限制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分析：Zotero的同步类型"><span class="nav-number">3.1.</span> <span class="nav-text">分析：Zotero的同步类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#操作：取消文件同步"><span class="nav-number">3.2.</span> <span class="nav-text">操作：取消文件同步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结果：本地文件夹Storage"><span class="nav-number">3.3.</span> <span class="nav-text">结果：本地文件夹Storage</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#需求场景2：要对附件文件进行备份"><span class="nav-number">4.</span> <span class="nav-text">需求场景2：要对附件文件进行备份</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分析：附件文件同步方案"><span class="nav-number">4.1.</span> <span class="nav-text">分析：附件文件同步方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#操作：WebDav坚果云"><span class="nav-number">4.2.</span> <span class="nav-text">操作：WebDav坚果云</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结果：坚果云成功同步Storage-但是文件名是乱码"><span class="nav-number">4.3.</span> <span class="nav-text">结果：坚果云成功同步Storage, 但是文件名是乱码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#需求场景3：附件文件管理-附件文件备份"><span class="nav-number">5.</span> <span class="nav-text">需求场景3：附件文件管理 + 附件文件备份</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分析：zotfile：Zotero的高级PDF管理"><span class="nav-number">5.1.</span> <span class="nav-text">分析：zotfile：Zotero的高级PDF管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#操作：设置Zotero、zotfile、同步网盘"><span class="nav-number">5.2.</span> <span class="nav-text">操作：设置Zotero、zotfile、同步网盘</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#写在最后"><span class="nav-number">6.</span> <span class="nav-text">写在最后</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">7.</span> <span class="nav-text">参考资料</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ChangeLog"><span class="nav-number">8.</span> <span class="nav-text">ChangeLog</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Yina</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
