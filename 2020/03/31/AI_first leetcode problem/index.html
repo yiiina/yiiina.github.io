@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Q: 两数之和给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个 整数，并返回它们的数组下标。 你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。 你可以按任意顺序返回答案。 两数之和的题目地址 A: 数组问题，用哈希表解决，python3实现代码这是一道经典的数组问题，可以使用哈希表来解决。哈希表可">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ChatGPT4指导下完成第一道力扣算法题">
+<meta property="og:url" content="http://yoursite.com/2020/03/31/AI_first leetcode problem/index.html">
+<meta property="og:site_name" content="Yina Jiang">
+<meta property="og:description" content="Q: 两数之和给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个 整数，并返回它们的数组下标。 你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。 你可以按任意顺序返回答案。 两数之和的题目地址 A: 数组问题，用哈希表解决，python3实现代码这是一道经典的数组问题，可以使用哈希表来解决。哈希表可">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2023-03-31T10:58:15.024Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ChatGPT4指导下完成第一道力扣算法题">
+<meta name="twitter:description" content="Q: 两数之和给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个 整数，并返回它们的数组下标。 你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。 你可以按任意顺序返回答案。 两数之和的题目地址 A: 数组问题，用哈希表解决，python3实现代码这是一道经典的数组问题，可以使用哈希表来解决。哈希表可">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/03/31/AI_first leetcode problem/"/>
+
+
+
+
+
+  <title>ChatGPT4指导下完成第一道力扣算法题 | Yina Jiang</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Yina Jiang</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/31/AI_first leetcode problem/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yina">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yina Jiang">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">ChatGPT4指导下完成第一道力扣算法题</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-31T00:00:00+08:00">
+                2020-03-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/碳基生命和人工智能/" itemprop="url" rel="index">
+                    <span itemprop="name">碳基生命和人工智能</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Q-两数之和"><a href="#Q-两数之和" class="headerlink" title="Q: 两数之和"></a>Q: 两数之和</h3><p>给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个 整数，并返回它们的数组下标。 你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。 你可以按任意顺序返回答案。</p>
+<p><a href="https://leetcode.cn/problems/two-sum/" target="_blank" rel="noopener">两数之和的题目地址</a></p>
+<h3 id="A-数组问题，用哈希表解决，python3实现代码"><a href="#A-数组问题，用哈希表解决，python3实现代码" class="headerlink" title="A: 数组问题，用哈希表解决，python3实现代码"></a>A: 数组问题，用哈希表解决，python3实现代码</h3><p>这是一道经典的数组问题，可以使用哈希表来解决。哈希表可以快速地在常数时间内查找元素，因此可以在 $O(n)$ 时间复杂度内解决这个问题。</p>
+<p>具体地，我们可以遍历数组 <code>nums</code>，对于每个元素 <code>nums[i]</code>，查找是否存在另一个元素 <code>nums[j]</code>，满足 <code>nums[j] = target - nums[i]</code>。如果存在这样的 <code>j</code>，那么我们找到了一组符合条件的解。为了避免重复，我们要求 <code>i &lt; j</code>，也就是说，我们只需要在查找时从 <code>i+1</code> 开始，这样可以确保不会出现重复的解。</p>
+<p>下面是 Python3 代码实现：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def twoSum(self, nums: List[int], target: int) -&gt; List[int]:</span><br><span class="line">        # 创建一个哈希表，用来记录每个元素的下标</span><br><span class="line">        num_map = &#123;&#125;</span><br><span class="line">        for i in range(len(nums)):</span><br><span class="line">            # 查找是否存在另一个元素 nums[j]，满足 nums[j] = target - nums[i]</span><br><span class="line">            j = num_map.get(target - nums[i])</span><br><span class="line">            if j is not None and i != j:</span><br><span class="line">                # 如果找到了符合条件的解，返回结果</span><br><span class="line">                return [i, j]</span><br><span class="line">            # 将当前元素的下标记录到哈希表中</span><br><span class="line">            num_map[nums[i]] = i</span><br><span class="line">        # 如果找不到符合条件的解，返回空列表</span><br><span class="line">        return []</span><br></pre></td></tr></table></figure>
+<p>这个算法的时间复杂度为 $O(n)$，因为只需要遍历一次数组，每次查找时只需要常数时间，而且在哈希表中查找元素的时间复杂度为 $O(1)$。这个算法的空间复杂度也为 $O(n)$，因为需要使用哈希表来存储数组中的每个元素的下标。</p>
+<h3 id="代码执行和提交"><a href="#代码执行和提交" class="headerlink" title="代码执行和提交"></a>代码执行和提交</h3><p>执行代码没有bug。<br>提交完成第一道力扣算法题。</p>
+<h3 id="Q-amp-A-数组"><a href="#Q-amp-A-数组" class="headerlink" title="Q&amp;A: 数组"></a>Q&amp;A: 数组</h3><p>数组问题是指在数组中查找、排序、计数、求和、求平均值、去重、找出最大/最小值、求子数组等操作的问题。数组是一种<strong>线性数据结构</strong>，它可以在内存中连续地存储一组相同类型的数据。由于数组的随机访问时间是常数级别的，因此在处理需要随机访问数据的问题时，数组通常是一种高效的数据结构。</p>
+<p>数组问题通常需要使用一些基本算法和数据结构来解决，例如：</p>
+<ul>
+<li>线性搜索：遍历数组，逐个查找每个元素，直到找到目标元素。</li>
+<li>二分查找：在有序数组中查找元素，使用二分法逐步缩小查找范围，直到找到目标元素。</li>
+<li>快速排序：对数组进行排序，通过不断地选择一个基准元素，将数组分为两个子数组，并分别对子数组进行排序。</li>
+<li>哈希表：使用哈希表来存储数组中的元素，可以快速地在常数时间内查找、插入、删除元素。</li>
+<li>双指针技巧：使用两个指针来遍历数组，通常可以在 $O(n)$ 时间复杂度内解决问题。</li>
+<li>动态规划：使用动态规划算法来计算数组中的某些问题，例如最大子数组和、最长递增子序列等。</li>
+</ul>
+<p>数组问题是算法和数据结构中的经典问题，涵盖了各种不同的难度级别和类型。在解决数组问题时，我们需要灵活运用各种算法和数据结构，并掌握一些常用的技巧和思维模式。</p>
+<h3 id="Q-amp-A-哈希表"><a href="#Q-amp-A-哈希表" class="headerlink" title="Q&amp;A: 哈希表"></a>Q&amp;A: 哈希表</h3><p>哈希表是一种常见的数据结构，它能够在常数时间内快速地插入、删除和查找元素。哈希表基于哈希函数实现，将元素的关键字映射到一个固定大小的数组中，每个数组位置对应一个桶。在插入、删除和查找元素时，哈希表会先计算出元素的哈希值，然后根据哈希值找到对应的桶，进而操作桶中的元素。</p>
+<p>一个简单的例子是，我们要存储一组学生的成绩，其中每个学生有一个唯一的学号和对应的成绩。我们可以使用一个哈希表来实现这个功能，将学号作为元素的关键字，成绩作为元素的值，将这些元素存储在哈希表中。当需要查找某个学生的成绩时，我们只需要根据学号计算出对应的哈希值，找到对应的桶，进而查找桶中的元素即可。</p>
+<p>下面是 Python3 中使用哈希表实现这个例子的代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">class Student:</span><br><span class="line">    def __init__(self, id, score):</span><br><span class="line">        self.id = id</span><br><span class="line">        self.score = score</span><br><span class="line"></span><br><span class="line">class Gradebook:</span><br><span class="line">    def __init__(self):</span><br><span class="line">        self.students = &#123;&#125;</span><br><span class="line">    </span><br><span class="line">    def add_student(self, student):</span><br><span class="line">        self.students[student.id] = student.score</span><br><span class="line">    </span><br><span class="line">    def get_score(self, id):</span><br><span class="line">        return self.students.get(id)</span><br></pre></td></tr></table></figure>
+<p>在这个例子中，我们定义了一个 <code>Student</code> 类来表示学生，包含学号和成绩两个属性。然后定义了一个 <code>Gradebook</code> 类来实现成绩单，使用哈希表来存储学生的成绩。在添加学生时，我们将学号作为键，成绩作为值存储到哈希表中；在查找学生成绩时，我们只需要根据学号查找哈希表中对应的值即可。</p>
+<p>哈希表是一种常用的数据结构，在计算机科学和软件工程中得到了广泛的应用。除了上述例子中的学生成绩单外，哈希表还可以用于实现字典、集合、缓存等数据结构和算法。</p>
+<p>changelog<br>20230331 初稿</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/03/29/my life march in south of the river/" rel="next" title="江南的三月">
+                <i class="fa fa-chevron-left"></i> 江南的三月
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/04/22/blue fish poetry/" rel="prev" title="备课：诗教的选择">
+                备课：诗教的选择 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Yina</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">83</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Q-两数之和"><span class="nav-number">1.</span> <span class="nav-text">Q: 两数之和</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#A-数组问题，用哈希表解决，python3实现代码"><span class="nav-number">2.</span> <span class="nav-text">A: 数组问题，用哈希表解决，python3实现代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码执行和提交"><span class="nav-number">3.</span> <span class="nav-text">代码执行和提交</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Q-amp-A-数组"><span class="nav-number">4.</span> <span class="nav-text">Q&amp;A: 数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Q-amp-A-哈希表"><span class="nav-number">5.</span> <span class="nav-text">Q&amp;A: 哈希表</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Yina</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

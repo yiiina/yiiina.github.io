@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="我们说自己处在信息时代，但是信息这个词，理解有多少？为何信息和人类世界的发展有划时代的意义？既然信息如此重要，信息又如何度量？我们又如何让自己的生活方式，认知方式，更好地适应这个时代？ 熵：大大爆炸开始说起宇宙起源域低熵的状态，从大爆炸开始，宇宙不断扩散，一切事物都处在衰退之中，而且将一直持续。 就像《生活大爆炸》主题曲的歌词：  Our whole universe was in a hot d">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从大爆炸到人类，从熵到信息（上）">
+<meta property="og:url" content="http://yoursite.com/2020/03/22/AI_entropy and infomation/index.html">
+<meta property="og:site_name" content="Yina Jiang">
+<meta property="og:description" content="我们说自己处在信息时代，但是信息这个词，理解有多少？为何信息和人类世界的发展有划时代的意义？既然信息如此重要，信息又如何度量？我们又如何让自己的生活方式，认知方式，更好地适应这个时代？ 熵：大大爆炸开始说起宇宙起源域低熵的状态，从大爆炸开始，宇宙不断扩散，一切事物都处在衰退之中，而且将一直持续。 就像《生活大爆炸》主题曲的歌词：  Our whole universe was in a hot d">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2023-03-30T11:13:03.005Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="从大爆炸到人类，从熵到信息（上）">
+<meta name="twitter:description" content="我们说自己处在信息时代，但是信息这个词，理解有多少？为何信息和人类世界的发展有划时代的意义？既然信息如此重要，信息又如何度量？我们又如何让自己的生活方式，认知方式，更好地适应这个时代？ 熵：大大爆炸开始说起宇宙起源域低熵的状态，从大爆炸开始，宇宙不断扩散，一切事物都处在衰退之中，而且将一直持续。 就像《生活大爆炸》主题曲的歌词：  Our whole universe was in a hot d">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/03/22/AI_entropy and infomation/"/>
+
+
+
+
+
+  <title>从大爆炸到人类，从熵到信息（上） | Yina Jiang</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Yina Jiang</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/22/AI_entropy and infomation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yina">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yina Jiang">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">从大爆炸到人类，从熵到信息（上）</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-22T00:00:00+08:00">
+                2020-03-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/碳基生命和人工智能/" itemprop="url" rel="index">
+                    <span itemprop="name">碳基生命和人工智能</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>我们说自己处在信息时代，但是信息这个词，理解有多少？为何信息和人类世界的发展有划时代的意义？既然信息如此重要，信息又如何度量？我们又如何让自己的生活方式，认知方式，更好地适应这个时代？</p>
+<h2 id="熵：大大爆炸开始说起"><a href="#熵：大大爆炸开始说起" class="headerlink" title="熵：大大爆炸开始说起"></a>熵：大大爆炸开始说起</h2><p>宇宙起源域低熵的状态，从大爆炸开始，宇宙不断扩散，一切事物都处在衰退之中，而且将一直持续。</p>
+<p>就像《生活大爆炸》主题曲的歌词：</p>
+<blockquote>
+<p>Our whole universe was in a hot dense state,宇宙一度又烫又稠密<br>Then nearly fourteen billion years ago expansion started. Wait…140亿年前终于爆了炸<br>The Earth began to cool,地球开始降温<br>The autotrophs began to drool,自养生物来起哄<br>Neanderthals developed tools,穴居人发明工具<br>We built a wall (we built the pyramids),我们建长城（我们建金字塔）<br>Math, science, history, unraveling the mysteries,数学 自然科学 历史 揭开神秘<br>That all started with the big bang! 一切由大爆炸开始</p>
+</blockquote>
+<p>熵（或者说无序）是用来理解人类状况的一个基本概念。这个概念来源于热力学第二定律：孤立系统，与外界不发生任何能量传递和物质交换的系统熵永远不会减少。封闭的系统必然越来越紊乱，涣散，无用，无效，直到陷入一种沉寂，单调的平衡状态，并一直保持这种状态。</p>
+<h2 id="局部系统的逆熵进程"><a href="#局部系统的逆熵进程" class="headerlink" title="局部系统的逆熵进程"></a>局部系统的逆熵进程</h2><p>虽然宇宙在不断增熵，但宇宙也有充满生机的世界。</p>
+<p>物理世界中，存在一种“自组织”的进程，可以让有限的区域实现秩序。当能量注入某个系统，且这个系统在增熵的过程中消耗这些能量，它就会呈现一种有序的，同时也是漂亮的造型，例如球体，螺旋，星爆，旋涡，波纹，晶体或者分形。我们感受这些构造有美感，说明美并不仅仅存在观者的眼中，也是大脑的审美反应对自然界各种反熵形态的接受。</p>
+<p>除了物理世界中优雅的对称与节奏，自然界还存在另一种秩序，就是生命世界的功能设计。生物有不同的器官构成，这些器官又有互相异质的组成部分，它们配置到一起，各司其职，确保生物得以存活，换句话说，就是不断吸收能力，抵抗熵的侵蚀。</p>
+<h2 id="信息：熵的减少"><a href="#信息：熵的减少" class="headerlink" title="信息：熵的减少"></a>信息：熵的减少</h2><p>信息可以理解为熵的减少，是区分有序的结构化系统与大量随机，无用的系统的要素。</p>
+<p>进化过程中，信息在基因组中得到不断的积累。DNA分子中的碱基序列与构成生物体蛋白的氨基酸序列形成对应，而碱基和氨基酸通过构建这个生物的祖先，也就是减少它们的熵，来获得这个序列。它们将原始生物构建成一个几乎不可能的结构，使其获得能量，成长繁衍。</p>
+<p>神经网络不仅能储存信息，也能改造信息。大脑是由无数逻辑和统计回路构成的庞大网络，它能进行复杂的函数计算，大脑可以依照外部世界的各种法则来改造感觉器官所接受的外部信息，从而做出有用的推论和预测。内在表征一方面与世界的状态形成可靠的对应，一方面又能进行推测，由真前提得出真结论，这就是知识。</p>
+<p>利用知识来引导能量，是遏制熵的重要法宝。获取的能量越多，人类的命运也就越好。如果说世界由物质与信息构成。相比于原始社会，现代社会的信息比重越来越高。</p>
+<p>香农（Shannon）给信息下的定义是：凡是在一种情况下能减少不确定性的任何事物都叫信息。</p>
+<p>罗杰斯进一步阐述了香农的信息概念，把信息被定义为一种区别于物质-能源的东西，在需要作出决策时，有一个选择存在于一批选择之中，这种情况下，信息影响不确定性，因此，信息是为了减少不确定性。</p>
+<p>我原来对信息的理解是储存量，比如说1MB = 1024bite，1GB = 1024MB。信息的不确定性，则是建立在对信息的意义理解之上。就比如说，我们会觉得知识的记忆很重要，但是理解和应用知识更重要。信息不仅包含信息的记忆，也促成信息的理解和应用。</p>
+<p>深入理解信息，意味着理解用信息定义一个时代，背后的道理和意义。信息量，真的可以和石油，和能量放到一个重要的级别。它真的是一个时代的分水岭，说数据是石油，就能更深入理解这个比喻的含义。</p>
+<h2 id="信息和人类的关系"><a href="#信息和人类的关系" class="headerlink" title="信息和人类的关系"></a>信息和人类的关系</h2><p>人类生命和幸福取决于无限多可能中一组概率极小的有序安排。</p>
+<p>我们的身体是一种极小概率的分子组合，它们在其他一些极小概率因素的帮助下维持自身的只需，其中一些形成事物，为我们提供营养，另一些则形成其他的生活资料，满足穿衣，住房等基本需求和爱好。地球上大多数自然安排对我们没有任何实际的用途。因此当事物发生变化时，如果没有人对变化进行引导，这种变化就可能向坏的一面发展。</p>
+<p>列夫托尔斯泰在名作《安娜·卡列尼娜》中的名言，也符合这样的宇宙定律。——  “幸福的人总是类似，不幸则有各种各样的不幸”。幸福不是必然，是需要连续在各种选择中，都不能选差的，而尽量连续选择对的。如果没有知识，经验，大量数据的积累，谁说幸福不需要运气？</p>
+<p>这一定律告诉我们的是：我们诞生于一个悲惨的世界，世间的不幸，也并非都是源于某人的过错。天地不仁，是客观事实。</p>
+<p>但我们并不是对此无能为力，进化和信息，也给我们赋能，我们可以通过各种手段来改善我们的处境。</p>
+<p>以及我们的能力日趋变强。我们称自己进入信息时代，也意外着我们有能创作更多信息，减缓熵的进程，创造有秩序的美好世界。</p>
+<p>如果说工业时代，我们学得是各种技能，信息时代，信息分析素养，和创作信息的能力无疑是自我提升必备课。输出更高价值的信息，也从源头控制信息输入的价值。</p>
+<p>那么如何度量自己创造信息的价值呢？从定义出发，就是不断消除不确定性。</p>
+<p>例如工作中的沟通，无外乎3种情况：</p>
+<ol>
+<li>我提供一些信息，但是事情并没有完结，这种属于FYI，同步信息，提供完信息，即完结状态。</li>
+<li>我这里有一些情况，需要对方给到答案。那这种沟通，就是提问。提问有几种方式：是非题和选择题，问答题。</li>
+<li>是非题和选择题自己输出信息量多，对方需要输出的信息量少，对方容易回答，该问题容易完结，终止增熵过程。</li>
+<li>问答题，提供对方的信息量少，对对方的信息量输出要求最高。很有可能对方无法回答，如果对方长时间无法回答，这个问题的状态就容易趋于无序。</li>
+</ol>
+<p>如何体现在工作中是哪个价值更高的人？价值高的，就是那种给别人提供更高信息量，更有力量终止熵的进程的人。具体的感知就是，不断被消除不确定感，焦虑感，感到安心。</p>
+<p>以及生活中，如何更有可能成为幸福的人？从避开各种不幸出发，那可操作性更好。我们常说，不要作，no zuo no dye why they try? 作，往往也意味着，明明有，且明明知道什么是更理性的选择，但偏偏要选那个风险更大，也意味着更可能不幸的选择。尽量不要作，也就意味着有更大幸福的可能了。</p>
+<p>我们的每一个进步，都源于巨大的努力。但是破坏是容易的，我们就是靠永不停歇，君子自强不息的动力去追求进步。不要无视那些有巨大价值的小事，如果对这些习以为常，漠然视之，沉溺在自己的痛苦之中，那就不对了。</p>
+<h2 id="ChangeLog"><a href="#ChangeLog" class="headerlink" title="ChangeLog"></a>ChangeLog</h2><p>2020-03-22 初稿</p>
+<p>参考：<br>【学习观10.5】什么是信息熵（四格版）<br><a href="https://www.bilibili.com/video/av41463132" target="_blank" rel="noopener">https://www.bilibili.com/video/av41463132</a><br>【学习观11】为什么信息还有单位？如何计算信息量？<br><a href="https://www.bilibili.com/video/av41539594" target="_blank" rel="noopener">https://www.bilibili.com/video/av41539594</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/03/14/read_read target habit and review in 10 years/" rel="next" title="读书十年：关于读书的目标，习惯，和书评">
+                <i class="fa fa-chevron-left"></i> 读书十年：关于读书的目标，习惯，和书评
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/03/29/my life march in south of the river/" rel="prev" title="江南的三月">
+                江南的三月 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Yina</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">83</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#熵：大大爆炸开始说起"><span class="nav-number">1.</span> <span class="nav-text">熵：大大爆炸开始说起</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#局部系统的逆熵进程"><span class="nav-number">2.</span> <span class="nav-text">局部系统的逆熵进程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#信息：熵的减少"><span class="nav-number">3.</span> <span class="nav-text">信息：熵的减少</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#信息和人类的关系"><span class="nav-number">4.</span> <span class="nav-text">信息和人类的关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ChangeLog"><span class="nav-number">5.</span> <span class="nav-text">ChangeLog</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Yina</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

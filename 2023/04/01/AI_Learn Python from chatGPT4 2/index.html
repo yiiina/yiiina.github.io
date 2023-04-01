@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="问了10个最入门的代码,感觉比《 Learn Python the Hard Way》还更友好一些,有一些基础的算法思路在里面，而《 Learn Python the Hard Way》更多是功能的熟练。 好的，以下是10段适合入门的 Python 代码：这些代码示例可以帮助你快速了解 Python 的基本语法和一些常用的操作，适合初学者入门。 1.  输出 Hello, World!1print">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在chatgpt4的指导下复习python：10段入门代码（2）">
+<meta property="og:url" content="http://yoursite.com/2023/04/01/AI_Learn Python from chatGPT4 2/index.html">
+<meta property="og:site_name" content="Yina Jiang">
+<meta property="og:description" content="问了10个最入门的代码,感觉比《 Learn Python the Hard Way》还更友好一些,有一些基础的算法思路在里面，而《 Learn Python the Hard Way》更多是功能的熟练。 好的，以下是10段适合入门的 Python 代码：这些代码示例可以帮助你快速了解 Python 的基本语法和一些常用的操作，适合初学者入门。 1.  输出 Hello, World!1print">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2023-04-01T15:13:01.594Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="在chatgpt4的指导下复习python：10段入门代码（2）">
+<meta name="twitter:description" content="问了10个最入门的代码,感觉比《 Learn Python the Hard Way》还更友好一些,有一些基础的算法思路在里面，而《 Learn Python the Hard Way》更多是功能的熟练。 好的，以下是10段适合入门的 Python 代码：这些代码示例可以帮助你快速了解 Python 的基本语法和一些常用的操作，适合初学者入门。 1.  输出 Hello, World!1print">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2023/04/01/AI_Learn Python from chatGPT4 2/"/>
+
+
+
+
+
+  <title>在chatgpt4的指导下复习python：10段入门代码（2） | Yina Jiang</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Yina Jiang</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2023/04/01/AI_Learn Python from chatGPT4 2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yina">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yina Jiang">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">在chatgpt4的指导下复习python：10段入门代码（2）</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2023-04-01T00:00:00+08:00">
+                2023-04-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/碳基生命和人工智能/" itemprop="url" rel="index">
+                    <span itemprop="name">碳基生命和人工智能</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>问了10个最入门的代码,感觉比《 Learn Python the Hard Way》还更友好一些,有一些基础的算法思路在里面，而《 Learn Python the Hard Way》更多是功能的熟练。</p>
+<p>好的，以下是10段适合入门的 Python 代码：这些代码示例可以帮助你快速了解 Python 的基本语法和一些常用的操作，适合初学者入门。</p>
+<h3 id="1-输出-Hello-World"><a href="#1-输出-Hello-World" class="headerlink" title="1.  输出 Hello, World!"></a>1.  输出 Hello, World!</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(&quot;Hello, World!&quot;)</span><br></pre></td></tr></table></figure>
+<h3 id="2-计算-1-到-10-的和"><a href="#2-计算-1-到-10-的和" class="headerlink" title="2.  计算 1 到 10 的和"></a>2.  计算 1 到 10 的和</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sum = 0</span><br><span class="line">for i in range(1, 11):</span><br><span class="line">    sum += i</span><br><span class="line">print(sum)</span><br></pre></td></tr></table></figure>
+<p>这段代码的作用是计算从1到10的所有整数的和，并将结果打印出来。</p>
+<p>变量sum被初始化为0，然后通过一个for循环迭代1到10的所有整数。在每次循环中，当前整数i被加到sum变量中。循环结束后，变量sum包含从1到10的所有整数的和。最后，使用print()函数打印出sum的值。</p>
+<h3 id="3-判断一个数是奇数还是偶数"><a href="#3-判断一个数是奇数还是偶数" class="headerlink" title="3.  判断一个数是奇数还是偶数"></a>3.  判断一个数是奇数还是偶数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">num = int(input(&quot;Enter a number: &quot;))</span><br><span class="line">if num % 2 == 0:</span><br><span class="line">    print(num, &quot;is even.&quot;)</span><br><span class="line">else:</span><br><span class="line">    print(num, &quot;is odd.&quot;)</span><br></pre></td></tr></table></figure>
+<p>这段代码的意思是让用户输入一个整数，然后判断它是偶数还是奇数。如果它是偶数，则输出它是偶数；否则输出它是奇数。这是一个基本的条件语句，其中if语句用于检查一个条件，如果该条件为真，则执行相应的代码块；否则执行else语句块中的代码。在这个例子中，我们使用了取模运算符（%）来检查一个数是否是偶数，因为如果一个数是偶数，它对2求余的结果将是0。</p>
+<h3 id="4-将一个字符串反转"><a href="#4-将一个字符串反转" class="headerlink" title="4.  将一个字符串反转"></a>4.  将一个字符串反转</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">str = input(&quot;Enter a string: &quot;)</span><br><span class="line">reverse_str = str[::-1]</span><br><span class="line">print(&quot;Reverse string is: &quot;, reverse_str)</span><br></pre></td></tr></table></figure>
+<p>Enter a string: 是的<br>Reverse string is:  的是</p>
+<p>这段代码要求用户输入一个字符串，然后将字符串反转并输出。</p>
+<p>代码的第一行使用 <code>input</code> 函数要求用户输入一个字符串，并将其存储在变量 <code>str</code> 中。</p>
+<p>第二行使用字符串的切片操作 <code>[::-1]</code> 反转字符串。这个操作将从字符串的末尾开始，步长为 -1（即从右到左），一直到字符串的开头。这样就得到了一个反转后的字符串，保存在变量 <code>reverse_str</code> 中。</p>
+<p>第三行使用 <code>print</code> 函数输出反转后的字符串。输出信息中包含字符串 “Reverse string is: “，后面跟着反转后的字符串 <code>reverse_str</code>。</p>
+<h3 id="5-计算圆的面积和周长"><a href="#5-计算圆的面积和周长" class="headerlink" title="5.  计算圆的面积和周长"></a>5.  计算圆的面积和周长</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import math</span><br><span class="line"></span><br><span class="line">radius = float(input(&quot;Enter the radius: &quot;))</span><br><span class="line">area = math.pi * radius * radius</span><br><span class="line">circumference = 2 * math.pi * radius</span><br><span class="line"></span><br><span class="line">print(&quot;Area of the circle is: &quot;, area)</span><br><span class="line">print(&quot;Circumference of the circle is: &quot;, circumference)</span><br></pre></td></tr></table></figure>
+<h3 id="6-判断一个数是否为质数"><a href="#6-判断一个数是否为质数" class="headerlink" title="6.  判断一个数是否为质数"></a>6.  判断一个数是否为质数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">num = int(input(&quot;Enter a number: &quot;))</span><br><span class="line">if num &gt; 1:</span><br><span class="line">    for i in range(2, int(num/2)+1):</span><br><span class="line">        if (num % i) == 0:</span><br><span class="line">            print(num, &quot;is not a prime number&quot;)</span><br><span class="line">            break</span><br><span class="line">    else:</span><br><span class="line">        print(num, &quot;is a prime number&quot;)</span><br><span class="line">else:</span><br><span class="line">    print(num, &quot;is not a prime number&quot;)</span><br></pre></td></tr></table></figure>
+<h3 id="7-猜数字游戏"><a href="#7-猜数字游戏" class="headerlink" title="7.  猜数字游戏"></a>7.  猜数字游戏</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">import random</span><br><span class="line"></span><br><span class="line">number = random.randint(1, 100)</span><br><span class="line">guess = 0</span><br><span class="line">count = 0</span><br><span class="line"></span><br><span class="line">while guess != number:</span><br><span class="line">    guess = int(input(&quot;Enter a number between 1 and 100: &quot;))</span><br><span class="line">    count += 1</span><br><span class="line">    if guess &gt; number:</span><br><span class="line">        print(&quot;Too high&quot;)</span><br><span class="line">    elif guess &lt; number:</span><br><span class="line">        print(&quot;Too low&quot;)</span><br><span class="line">    else:</span><br><span class="line">        print(&quot;Congratulations! You guessed the number in&quot;, count, &quot;tries.&quot;)</span><br></pre></td></tr></table></figure>
+<h3 id="8-计算阶乘"><a href="#8-计算阶乘" class="headerlink" title="8.  计算阶乘"></a>8.  计算阶乘</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">num = int(input(&quot;Enter a number: &quot;))</span><br><span class="line">factorial = 1</span><br><span class="line"></span><br><span class="line">if num &lt; 0:</span><br><span class="line">    print(&quot;Factorial does not exist for negative numbers&quot;)</span><br><span class="line">elif num == 0:</span><br><span class="line">    print(&quot;Factorial of 0 is 1&quot;)</span><br><span class="line">else:</span><br><span class="line">    for i in range(1, num+1):</span><br><span class="line">        factorial *= i</span><br><span class="line">    print(&quot;Factorial of&quot;, num, &quot;is&quot;, factorial)</span><br></pre></td></tr></table></figure>
+<h3 id="9-列表操作"><a href="#9-列表操作" class="headerlink" title="9.  列表操作"></a>9.  列表操作</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">fruits = [&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;]</span><br><span class="line">print(fruits)</span><br><span class="line"></span><br><span class="line">fruits.append(&quot;orange&quot;)</span><br><span class="line">print(fruits)</span><br><span class="line"></span><br><span class="line">fruits.remove(&quot;banana&quot;)</span><br><span class="line">print(fruits)</span><br><span class="line"></span><br><span class="line">fruits.pop(1)</span><br><span class="line">print(fruits)</span><br></pre></td></tr></table></figure>
+<h3 id="10-字典操作"><a href="#10-字典操作" class="headerlink" title="10.  字典操作"></a>10.  字典操作</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">person = &#123;&quot;name&quot;: &quot;John&quot;, &quot;age&quot;: 30, &quot;city&quot;: &quot;New York&quot;&#125;</span><br><span class="line">print(person)</span><br><span class="line"></span><br><span class="line">person[&quot;age&quot;] = 40</span><br><span class="line">print(person)</span><br><span class="line"></span><br><span class="line">person.pop(&quot;city&quot;)</span><br><span class="line">print(person)</span><br><span class="line"></span><br><span class="line">person.clear()</span><br><span class="line">print(person)</span><br></pre></td></tr></table></figure>
+<h1 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h1><h2 id="Python基础概览"><a href="#Python基础概览" class="headerlink" title="Python基础概览"></a>Python基础概览</h2><h3 id="输入-输出"><a href="#输入-输出" class="headerlink" title="输入/输出"></a>输入/输出</h3><p>输入 raw_input( )<br>输出 print</p>
+<h3 id="语句（控制流程）"><a href="#语句（控制流程）" class="headerlink" title="语句（控制流程）"></a>语句（控制流程）</h3><p>赋值语句:a = 3<br>模块导入 :import math<br>条件语句:if/elif/else<br>循环语句 for,while<br>无条件分支语句</p>
+<h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h3><p>数据<br>数字 number<br>整数 int<br>浮点数 float<br>字符串 sting<br>布尔值 boolean<br>列表 list<br>字典 dict<br>byte<br>none<br>tuple<br>set<br>类 class<br>文件</p>
+<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><p>符号：# % ／ &gt; “”” “””<br>变量<br>函数<br>运算符<br>算数运算符 + - * ／ % ** ／／<br>比较运算符 = = 等于 ！=不等于 &gt; &lt; &gt;= &lt;=<br>逻辑运算符<br>布尔类型：True,False<br>布尔运算:and,or,not</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2023/04/01/AI_Learn Python from chatGPT4 1/" rel="next" title="在chatgpt4的指导下复习python:启动">
+                <i class="fa fa-chevron-left"></i> 在chatgpt4的指导下复习python:启动
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2023/04/01/media/14861298830099/14861298990971.jpg/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Yina</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">83</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-输出-Hello-World"><span class="nav-number">1.</span> <span class="nav-text">1.  输出 Hello, World!</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-计算-1-到-10-的和"><span class="nav-number">2.</span> <span class="nav-text">2.  计算 1 到 10 的和</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-判断一个数是奇数还是偶数"><span class="nav-number">3.</span> <span class="nav-text">3.  判断一个数是奇数还是偶数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-将一个字符串反转"><span class="nav-number">4.</span> <span class="nav-text">4.  将一个字符串反转</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-计算圆的面积和周长"><span class="nav-number">5.</span> <span class="nav-text">5.  计算圆的面积和周长</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-判断一个数是否为质数"><span class="nav-number">6.</span> <span class="nav-text">6.  判断一个数是否为质数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-猜数字游戏"><span class="nav-number">7.</span> <span class="nav-text">7.  猜数字游戏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-计算阶乘"><span class="nav-number">8.</span> <span class="nav-text">8.  计算阶乘</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-列表操作"><span class="nav-number">9.</span> <span class="nav-text">9.  列表操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-字典操作"><span class="nav-number">10.</span> <span class="nav-text">10.  字典操作</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#附录"><span class="nav-number"></span> <span class="nav-text">附录</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Python基础概览"><span class="nav-number"></span> <span class="nav-text">Python基础概览</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#输入-输出"><span class="nav-number">1.</span> <span class="nav-text">输入/输出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#语句（控制流程）"><span class="nav-number">2.</span> <span class="nav-text">语句（控制流程）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对象"><span class="nav-number">3.</span> <span class="nav-text">对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法"><span class="nav-number">4.</span> <span class="nav-text">方法</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Yina</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
